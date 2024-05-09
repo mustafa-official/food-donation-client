@@ -2,9 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { Tooltip } from "react-tooltip";
 import { Button } from "@material-tailwind/react";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, logOutUser } = useAuth();
   const navLink = (
     <>
       <NavLink
@@ -16,42 +17,56 @@ const Navbar = () => {
         Home
       </NavLink>
       <NavLink
-        to="/allCrafts"
+        to="/available-foods"
         className={({ isActive }) =>
           isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
         }
       >
-         Available Foods
+        Available Foods
       </NavLink>
-      <NavLink
-        to="/addCraft"
-        className={({ isActive }) =>
-          isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
-        }
-      >
-        Add Food
-      </NavLink>
-      <NavLink
-        to="/myCraftList"
-        className={({ isActive }) =>
-          isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
-        }
-      >
-        Manage My Foods
-      </NavLink>
-      <NavLink
-        to="/myCraftList"
-        className={({ isActive }) =>
-          isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
-        }
-      >
-         My Food Request
-      </NavLink>
+      {user && (
+        <>
+          <NavLink
+            to="/add-food"
+            className={({ isActive }) =>
+              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+            }
+          >
+            Add Food
+          </NavLink>
+          <NavLink
+            to="/manage-foods"
+            className={({ isActive }) =>
+              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+            }
+          >
+            Manage My Foods
+          </NavLink>
+          <NavLink
+            to="/food-request"
+            className={({ isActive }) =>
+              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+            }
+          >
+            My Food Request
+          </NavLink>
+        </>
+      )}
     </>
   );
+
+  const handleLogout = () => {
+    logOutUser()
+      .then(() => {
+        toast.success("Logout Successfully");
+      })
+      .catch((error) => {
+        toast.error(`${error.message}`);
+      });
+  };
   return (
     <div>
-      <div className="navbar h-20 px-0 md:px-4 lg:px-12 ">
+      <div className="navbar h-20 px-0 md:px-4 lg:px-12">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -125,10 +140,10 @@ const Navbar = () => {
                   </div>
                   <ul
                     tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow-md rounded-md border border-[#00E661] menu menu-sm  dropdown-content bg-base-200 w-52"
+                    className="mt-3 z-[1] p-2 shadow-md rounded-md border border-[#00E661] menu menu-sm  dropdown-content bg-black w-52"
                   >
-                    <li>
-                      <button>Logout</button>
+                    <li className="hover:text-[#00E661]">
+                      <button onClick={handleLogout}>Logout</button>
                     </li>
                   </ul>
                 </div>

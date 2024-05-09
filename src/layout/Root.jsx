@@ -3,13 +3,15 @@ import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
 
 const Root = () => {
-    return (
-        <div className="bg-[#212428] text-white">
-        <Navbar></Navbar>
+  return (
+    <div className="bg-[#212428] text-white">
+      <Navbar></Navbar>
+      <div className="min-h-[calc(100vh-329px)] px-4 lg:px-12">
         <Outlet></Outlet>
-        <Footer></Footer>
-        </div>
-    );
+      </div>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Root;
