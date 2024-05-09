@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="divide-y bg-[#2c2b2b]  text-gray-100">
+        <footer className="divide-y mt-8 md:mt-10 lg:mt-16 bg-[#2c2b2b]  text-gray-100">
       <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className="mx-auto flex justify-center">
         <Link to="/">
@@ -176,3 +176,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

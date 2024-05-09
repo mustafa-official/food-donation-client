@@ -1,9 +1,10 @@
+import Banner from "../../components/Banner";
 
 
 const Home = () => {
     return (
         <section>
-            <h3 className="text-6xl font-extrabold">home page</h3>
+           <Banner></Banner>
         </section>
     );
 };
