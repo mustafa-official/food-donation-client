@@ -44,7 +44,7 @@ const SingleFoods = ({ food }) => {
         <div className="flex items-center gap-2 dark:text-gray-600">
           <div className="flex items-center gap-2">
             <p>
-              Expired: <span className="font-bold">{expired_date}</span>
+              Expired: <span className="font-bold">{new Date(expired_date).toLocaleDateString()}</span>
             </p>
           </div>
         </div>

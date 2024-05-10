@@ -53,6 +53,9 @@ const FoodDetails = () => {
           });
           navigate("/food-request");
         }
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
   return (
@@ -100,7 +103,7 @@ const FoodDetails = () => {
                 Quantity: <span className="font-bold">{food_quantity}</span>
               </p>
               <p>
-                Expired Date: <span className="font-bold">{expired_date}</span>
+                Expired Date: <span className="font-bold">{new Date(expired_date).toLocaleDateString()}</span>
               </p>
             </div>
           </div>

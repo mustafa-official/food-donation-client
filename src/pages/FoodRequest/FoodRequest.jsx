@@ -16,7 +16,7 @@ const FoodRequest = () => {
   return (
     <section className="container px-4 mx-auto pt-12">
       <div className="flex items-center gap-x-3">
-        <h2 className="text-lg font-medium  ">Food Requests</h2>
+        <h2 className="text-xl font-medium  ">Food Requests</h2>
 
         <span className="px-3 py-1 text-xs  bg-[#42A5F5] rounded-full ">
           {myRequset.length} Requests
@@ -28,11 +28,11 @@ const FoodRequest = () => {
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
             <div className="overflow-hidden border border-gray-200  md:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="font-bold text-xl">
+                <thead className="font-bold text-[18px]">
                   <tr>
                     <th
                       scope="col"
-                      className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right "
+                      className="py-3.5 px-4  font-normal text-left rtl:text-right "
                     >
                       <div className="flex items-center gap-x-3">
                         <span>Food Name</span>
@@ -40,7 +40,7 @@ const FoodRequest = () => {
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right "
+                      className="py-3.5 px-4 font-normal text-left rtl:text-right "
                     >
                       <div className="flex items-center gap-x-3">
                         <span>Donator Email</span>
@@ -48,7 +48,7 @@ const FoodRequest = () => {
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right "
+                      className="py-3.5 px-4 font-normal text-left rtl:text-right "
                     >
                       <div className="flex items-center gap-x-3">
                         <span>Expired Date</span>
@@ -57,14 +57,14 @@ const FoodRequest = () => {
 
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right "
+                      className="px-4 py-3.5 font-normal text-left rtl:text-right "
                     >
                       <span>Pickup Location</span>
                     </th>
 
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right "
+                      className="px-4 py-3.5 font-normal text-left rtl:text-right "
                     >
                       <button className="flex items-center gap-x-2">
                         <span>Quantity</span>
@@ -73,7 +73,7 @@ const FoodRequest = () => {
 
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right "
+                      className="px-4 py-3.5 font-normal text-left rtl:text-right "
                     >
                       Request Date
                     </th>
