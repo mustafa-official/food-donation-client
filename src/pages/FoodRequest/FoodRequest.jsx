@@ -66,9 +66,7 @@ const FoodRequest = () => {
                       scope="col"
                       className="px-4 py-3.5 font-normal text-left rtl:text-right "
                     >
-                      <button className="flex items-center gap-x-2">
-                        <span>Quantity</span>
-                      </button>
+                      <span>Quantity</span>
                     </th>
 
                     <th
