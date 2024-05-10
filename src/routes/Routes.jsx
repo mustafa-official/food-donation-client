@@ -32,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/available-foods",
         element: <AvailableFoods></AvailableFoods>,
+        loader: () => fetch(`${import.meta.env.VITE_API_URL}/available`),
       },
       {
         path: "/add-food",

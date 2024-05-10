@@ -1,18 +1,15 @@
 import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SingleFoods = ({ food }) => {
   //   console.log(food);
   const {
     food_image,
     food_name,
-    donator_image,
-    donator_name,
     food_quantity,
     pickup_location,
     expired_date,
-    food_status,
-    additional_notes,
     _id,
   } = food || {};
 
@@ -69,3 +66,6 @@ const SingleFoods = ({ food }) => {
 };
 
 export default SingleFoods;
+SingleFoods.propTypes = {
+  food: PropTypes.object,
+};

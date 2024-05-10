@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import SingleFoods from "./SingleFoods";
 import { Button } from "@material-tailwind/react";
@@ -8,9 +7,11 @@ import axios from "axios";
 const FeaturedFoods = () => {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/featured-foods`).then((res) =>
-      setFoods(res.data)
-    );
+    axios(`${import.meta.env.VITE_API_URL}/featured-foods`)
+      .then((res) => setFoods(res.data))
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
   // console.log(foods);
   return (

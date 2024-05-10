@@ -1,9 +1,19 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import useAuth from "../../hooks/useAuth";
+import axios from "axios";
+import Swal from "sweetalert2";
+
 const FoodDetails = () => {
   const food = useLoaderData();
   const [isOpen, setIsOpen] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
+  const navigate = useNavigate();
+  const { user } = useAuth();
+
   const {
     food_image,
     food_name,
@@ -12,14 +22,38 @@ const FoodDetails = () => {
     food_quantity,
     pickup_location,
     expired_date,
-    food_status,
     additional_notes,
     _id,
+    donator_email,
   } = food || {};
 
   const handleRequest = (e) => {
     e.preventDefault();
-    console.log(e.target.name.value);
+    const form = e.target;
+    const additional_notes = form.additionalNotes.value;
+    const food_status = "Requested";
+    const request_date = startDate;
+    const user_email = user?.email;
+    const requestInfo = {
+      additional_notes,
+      food_status,
+      request_date,
+      user_email,
+    };
+    // console.log(requestInfo);
+    axios
+      .put(`${import.meta.env.VITE_API_URL}/update-status/${_id}`, requestInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Your request has been successfully",
+            icon: "success",
+          });
+          navigate("/food-request");
+        }
+      });
   };
   return (
     <div>
@@ -102,7 +136,7 @@ const FoodDetails = () => {
                   className="text-lg font-medium leading-6 text-gray-800 capitalize dark:text-white"
                   id="modal-title"
                 >
-                  Invite your team
+                  Request Here
                 </h3>
 
                 <form
@@ -114,37 +148,87 @@ const FoodDetails = () => {
                       <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
                         <div>
                           <input
-                            id="username"
+                            disabled
+                            defaultValue={food_name}
                             type="text"
-                            placeholder="Username"
                             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
                           <input
-                            id="emailAddress"
-                            type="email"
+                            disabled
+                            defaultValue={food_image}
+                            type="text"
+                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            disabled
+                            defaultValue={donator_name}
+                            type="text"
+                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            disabled
+                            defaultValue={donator_email}
+                            type="text"
+                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            disabled
+                            defaultValue={pickup_location}
+                            type="text"
+                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          />
+                        </div>
+                        <div>
+                          <input
+                            disabled
+                            defaultValue={user?.email}
+                            type="text"
                             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
                           <input
-                            id="password"
-                            type="password"
+                            disabled
+                            defaultValue={_id}
+                            type="text"
                             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
                           <input
-                            id="passwordConfirmation"
-                            type="password"
+                            disabled
+                            defaultValue={pickup_location}
+                            type="text"
                             className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                          />
+                        </div>
+                        <div className="mt-2">
+                          <DatePicker
+                            disabled
+                            className="border p-2 rounded-lg w-full text-gray-700"
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
                           />
                         </div>
                       </div>
+                      <textarea
+                        defaultValue={additional_notes}
+                        className="w-full border border-gray-200 rounded-md text-black mt-6 p-3"
+                        rows={3}
+                        name="additionalNotes"
+                        placeholder="Write your think"
+                      ></textarea>
                     </div>
                     <div className="flex">
                       <button
@@ -158,7 +242,7 @@ const FoodDetails = () => {
                         type="submit"
                         className="w-full px-4 py-2 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
                       >
-                        Send invites
+                        Request Now
                       </button>
                     </div>
                   </div>
