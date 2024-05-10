@@ -9,6 +9,7 @@ import AddFood from "../pages/AddFood/AddFood";
 import ManageFoods from "../pages/ManageFoods/ManageFoods";
 import FoodRequest from "../pages/FoodRequest/FoodRequest";
 import PrivateRoute from "./PrivateRoute";
+import FoodDetails from "../pages/FoodDetails/FoodDetails";
 
 const router = createBrowserRouter([
   {
@@ -34,15 +35,37 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-food",
-        element: <PrivateRoute><AddFood></AddFood></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <AddFood></AddFood>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/manage-foods",
-        element: <PrivateRoute><ManageFoods></ManageFoods></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <ManageFoods></ManageFoods>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/food-request",
-        element: <PrivateRoute><FoodRequest></FoodRequest></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <FoodRequest></FoodRequest>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/food-details/:id",
+        element: (
+          <PrivateRoute>
+            <FoodDetails></FoodDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/details/${params.id}`),
       },
     ],
   },

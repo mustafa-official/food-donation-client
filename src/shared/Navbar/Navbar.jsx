@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { Tooltip } from "react-tooltip";
 import { Button } from "@material-tailwind/react";
@@ -6,12 +6,13 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
+  const navigate = useNavigate();
   const navLink = (
     <>
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+          isActive ? "  font-bold text-[#42A5F5]" : "hover:text-[#42A5F5]"
         }
       >
         Home
@@ -19,7 +20,7 @@ const Navbar = () => {
       <NavLink
         to="/available-foods"
         className={({ isActive }) =>
-          isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+          isActive ? "  font-bold text-[#42A5F5]" : "hover:text-[#42A5F5]"
         }
       >
         Available Foods
@@ -29,7 +30,7 @@ const Navbar = () => {
           <NavLink
             to="/add-food"
             className={({ isActive }) =>
-              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+              isActive ? "  font-bold text-[#42A5F5]" : "hover:text-[#42A5F5]"
             }
           >
             Add Food
@@ -37,7 +38,7 @@ const Navbar = () => {
           <NavLink
             to="/manage-foods"
             className={({ isActive }) =>
-              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+              isActive ? "  font-bold text-[#42A5F5]" : "hover:text-[#42A5F5]"
             }
           >
             Manage My Foods
@@ -45,7 +46,7 @@ const Navbar = () => {
           <NavLink
             to="/food-request"
             className={({ isActive }) =>
-              isActive ? "  font-bold text-[#00E661]" : "hover:text-[#00E661]"
+              isActive ? "  font-bold text-[#42A5F5]" : "hover:text-[#42A5F5]"
             }
           >
             My Food Request
@@ -58,6 +59,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logOutUser()
       .then(() => {
+        navigate("/login");
         toast.success("Logout Successfully");
       })
       .catch((error) => {
@@ -66,7 +68,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="navbar h-20 px-0 md:px-4 lg:px-12">
+      <div className="navbar h-20 px-0 md:px-4 lg:px-12 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -91,7 +93,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu z-50 menu-sm backdrop-blur-lg text-white dropdown-content p-2 border border-[#00E661]   mt-4 rounded-box min-h-[calc(100vh-80px)] w-56"
+              className="menu z-50 menu-sm backdrop-blur-lg text-white dropdown-content p-2 border border-[#42A5F5]   mt-4 rounded-box min-h-[calc(100vh-80px)] w-56"
             >
               <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
                 {/* navlink for phone */}
@@ -101,8 +103,8 @@ const Navbar = () => {
           </div>
 
           <Link to="/">
-            <h2 className="text-xl md:text-2xl text-[#00E661] font-black ">
-              Hey Food
+            <h2 className="text-xl md:text-2xl text-[#42A5F5] font-black ">
+              Hey Foods
             </h2>
           </Link>
         </div>
@@ -140,9 +142,9 @@ const Navbar = () => {
                   </div>
                   <ul
                     tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow-md rounded-md border border-[#00E661] menu menu-sm  dropdown-content bg-black w-52"
+                    className="mt-3 z-50 p-2 shadow-md rounded-md border border-[#42A5F5] menu menu-sm  dropdown-content bg-black w-52"
                   >
-                    <li className="hover:text-[#00E661]">
+                    <li>
                       <button onClick={handleLogout}>Logout</button>
                     </li>
                   </ul>
@@ -152,7 +154,7 @@ const Navbar = () => {
               <>
                 <Link to="/login">
                   <Button
-                    className="bg-[#00E661] font-grotesk"
+                    className="bg-[#42A5F5] font-grotesk"
                     style={{
                       textTransform: "capitalize",
                       fontSize: "16px",

@@ -4,8 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
-  const { loginUser, googleLogin, user, setUser } =
-    useContext(AuthContext);
+  const { loginUser, googleLogin, user, setUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -33,15 +32,15 @@ const Login = () => {
   };
 
   //Github Login
-//   const handleGithubLogin = () => {
-//     githubLogin().then(() => {
-//       navigate(location.state ? location.state : "/");
-//       toast.success("Login Successfully");
-//     });
-//   };
+  //   const handleGithubLogin = () => {
+  //     githubLogin().then(() => {
+  //       navigate(location.state ? location.state : "/");
+  //       toast.success("Login Successfully");
+  //     });
+  //   };
   return (
     <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
-      <div className="w-full mx-auto max-w-md mt-8 lg:mt-6 px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#00E661] text-gray-100">
+      <div className="w-full mx-auto max-w-md mt-8 lg:mt-6 px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#42A5F5] text-gray-100">
         <h1 className="text-2xl font-bold text-center mb-12">Login</h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">
@@ -67,7 +66,7 @@ const Login = () => {
               </a>
             </div>
           </div>
-          <button className="block w-full p-3 font-bold text-center rounded-sm  bg-[#00E661]">
+          <button className="block w-full p-3 font-bold text-center rounded-sm  bg-[#42A5F5]">
             Login
           </button>
         </form>

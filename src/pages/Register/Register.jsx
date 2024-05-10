@@ -54,7 +54,7 @@ const Register = () => {
   };
   return (
     <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
-      <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#00E661] text-gray-100">
+      <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#42A5F5] text-gray-100">
         <h1 className="text-2xl font-bold text-center mb-12">Register</h1>
         <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-1 text-sm">
@@ -108,10 +108,10 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <button className="block w-full font-bold p-3 text-center rounded-sm  bg-[#00E661]">
+          <button className="block w-full font-bold p-3 text-center rounded-sm  bg-[#42A5F5]">
             Register
           </button>
-          {error && <small className="text-[#00E661]">{error}</small>}
+          {error && <small className="text-[#42A5F5]">{error}</small>}
         </form>
 
         <p className="text-xs text-center sm:px-6 text-gray-400">
@@ -121,7 +121,6 @@ const Register = () => {
           </Link>
         </p>
       </div>
-      
     </div>
   );
 };

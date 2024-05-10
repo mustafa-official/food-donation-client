@@ -1,35 +1,34 @@
 import { Link } from "react-router-dom";
 
-
 const Footer = () => {
-    return (
-        <footer className="divide-y mt-8 md:mt-10 lg:mt-16 bg-[#2c2b2b]  text-gray-100">
+  return (
+    <footer className="divide-y mt-8 md:mt-10 lg:mt-16 bg-[#2c2b2b]  text-gray-100">
       <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className="mx-auto flex justify-center">
-        <Link to="/">
-            <h2 className="text-xl text-[#00E661] font-bold ">Hey Food</h2>
+          <Link to="/">
+            <h2 className="text-xl text-[#42A5F5] font-bold ">Hey Food</h2>
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-x-5 mx-auto text-sm gap-y-5 lg:gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-[#00E661] font-medium">
+            <h3 className="tracking-wide uppercase text-[#42A5F5] font-medium">
               Product
             </h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Features
                 </a>
               </li>
-              
+
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Pricing
@@ -38,7 +37,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   FAQ
@@ -47,14 +46,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-[#00E661] font-medium">
+            <h3 className="tracking-wide uppercase text-[#42A5F5] font-medium">
               Legal
             </h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Privacy Policy
@@ -63,7 +62,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Terms of Service
@@ -72,7 +71,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Cookie policy
@@ -81,12 +80,12 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase text-[#00E661] font-medium">Company</h3>
+            <h3 className="uppercase text-[#42A5F5] font-medium">Company</h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   About us
@@ -95,7 +94,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Contact us
@@ -104,7 +103,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#00E661]"
+                  className="hover:text-[#42A5F5]"
                   href="#"
                 >
                   Services
@@ -113,7 +112,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase text-[#00E661] font-medium">
+            <div className="uppercase text-[#42A5F5] font-medium">
               Social media
             </div>
             <div className="flex justify-start space-x-3">
@@ -121,7 +120,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Facebook"
-                className="flex items-center hover:text-[#00E661] p-1"
+                className="flex items-center hover:text-[#42A5F5] p-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +135,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Twitter"
-                className="flex items-center hover:text-[#00E661] p-1"
+                className="flex items-center hover:text-[#42A5F5] p-1"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -150,7 +149,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Instagram"
-                className="flex items-center p-1 hover:text-[#00E661]"
+                className="flex items-center p-1 hover:text-[#42A5F5]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -169,11 +168,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-6 text-sm text-center text-gray-400">
-        © 2024 Painters Nest. All rights reserved.
+        © 2024 Hey Foods. All rights reserved.
       </div>
     </footer>
-    );
+  );
 };
 
 export default Footer;
-
