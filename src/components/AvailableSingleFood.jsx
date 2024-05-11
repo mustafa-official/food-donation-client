@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const AvailableSingleFood = ({ food }) => {
+  
   const {
     food_image,
     food_name,
