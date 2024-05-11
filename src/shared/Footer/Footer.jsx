@@ -6,19 +6,19 @@ const Footer = () => {
       <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className="mx-auto flex justify-center">
           <Link to="/">
-            <h2 className="text-xl text-[#42A5F5] font-bold ">Hey Food</h2>
+            <h2 className="text-xl text-[#00BBE4] font-bold ">Hey Food</h2>
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-x-5 mx-auto text-sm gap-y-5 lg:gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-[#42A5F5] font-medium">
+            <h3 className="tracking-wide uppercase text-[#00BBE4] font-medium">
               Product
             </h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Features
@@ -28,7 +28,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Pricing
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   FAQ
@@ -46,14 +46,14 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase text-[#42A5F5] font-medium">
+            <h3 className="tracking-wide uppercase text-[#00BBE4] font-medium">
               Legal
             </h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Privacy Policy
@@ -62,7 +62,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Terms of Service
@@ -71,7 +71,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Cookie policy
@@ -80,12 +80,12 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="uppercase text-[#42A5F5] font-medium">Company</h3>
+            <h3 className="uppercase text-[#00BBE4] font-medium">Company</h3>
             <ul className="space-y-1">
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   About us
@@ -94,7 +94,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Contact us
@@ -103,7 +103,7 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  className="hover:text-[#42A5F5]"
+                  className="hover:text-[#00BBE4]"
                   href="#"
                 >
                   Services
@@ -112,7 +112,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase text-[#42A5F5] font-medium">
+            <div className="uppercase text-[#00BBE4] font-medium">
               Social media
             </div>
             <div className="flex justify-start space-x-3">
@@ -120,7 +120,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Facebook"
-                className="flex items-center hover:text-[#42A5F5] p-1"
+                className="flex items-center hover:text-[#00BBE4] p-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Twitter"
-                className="flex items-center hover:text-[#42A5F5] p-1"
+                className="flex items-center hover:text-[#00BBE4] p-1"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -149,7 +149,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 href="#"
                 title="Instagram"
-                className="flex items-center p-1 hover:text-[#42A5F5]"
+                className="flex items-center p-1 hover:text-[#00BBE4]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

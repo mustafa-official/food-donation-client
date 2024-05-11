@@ -19,7 +19,6 @@ const AvailableFoods = () => {
       });
   }, [search, sortDate]);
 
-
   const handleSearch = (e) => {
     e.preventDefault();
     const text = e.target.search.value;
@@ -30,18 +29,18 @@ const AvailableFoods = () => {
     const dates = e.target.value;
     setSortDate(dates);
   };
-// console.log(sortDate);
+  // console.log(sortDate);
   return (
     <div>
-      <h2 className="text-2xl md:text-4xl font-bold text-center">
+      <h2 className="text-2xl md:text-4xl md:mt-6 mt-8 font-bold text-center">
         Available Foods
       </h2>
-      <div className="flex justify-center items-center gap-5 mt-10">
+      <div className="flex justify-center flex-col md:flex-row items-center gap-3 mt-6 md:mt-10">
         <div>
-          <form onSubmit={handleSearch}>
-            <div className="flex p-1 overflow-hidden rounded-lg border-blue-400 border focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+          <form onSubmit={handleSearch} className="bg-white rounded-md">
+            <div className="flex p-1 overflow-hidden rounded-md focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
               <input
-                className="px-4 py-2 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
+                className="md:px-4 md:py-2 pl-2 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
                 type="text"
                 name="search"
                 placeholder="Enter food name"
@@ -49,7 +48,7 @@ const AvailableFoods = () => {
 
               <button
                 type="submit"
-                className="px-1 ml-2 bg-[#42A5F5] capitalize md:px-4 py-3 text-sm font-medium tracking-wider grotesk transition-colors duration-300 transform  rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
+                className="px-3 ml-2 bg-[#00BBE4]  md:px-3 py-3 text-sm  tracking-wider  transition-colors duration-300 transform  rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
               >
                 Search
               </button>
@@ -61,19 +60,18 @@ const AvailableFoods = () => {
             onChange={handleExpiredDate}
             name="category"
             id="category"
-            className="border py-3 px-4 rounded-lg"
+            className=" bg-[#00BBE4] text-white md:py-[14px] px-2 py-[10px] md:px-4 rounded-md"
           >
-            <option>Sort by expired date</option>
+            <option>Sort by</option>
             <option value="asc">Ascending</option>
             <option value="des">Descending</option>
-           
           </select>
         </div>
       </div>
       {availableFoods.length === 0 ? (
         <p>No data found!</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-10 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-5">
           {availableFoods.map((food) => (
             <AvailableSingleFood
               key={food._id}

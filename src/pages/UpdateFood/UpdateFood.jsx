@@ -63,7 +63,7 @@ const UpdateFood = () => {
     <div className="w-full mx-auto md:max-w-3xl md:mt-8 mt-5">
       <form
         onSubmit={handleUpdate}
-        className="mt-4 sm:flex sm:items-center sm:-mx-2 border border-[#42A5F5] py-8 rounded-xl px-6"
+        className="mt-4 sm:flex sm:items-center sm:-mx-2 border border-[#00BBE4] py-8 rounded-xl px-6"
       >
         <div className="flex flex-col gap-4 w-full">
           <h1 className="text-2xl font-bold text-center">Update Food</h1>

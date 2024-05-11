@@ -51,7 +51,7 @@ const ManageFoods = () => {
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Added Food</h2>
 
-        <span className="px-3 py-1 text-xs  bg-[#42A5F5] rounded-full ">
+        <span className="px-3 py-1 text-xs  bg-[#00BBE4] rounded-full ">
           {myFood.length} Foods
         </span>
       </div>
@@ -61,7 +61,7 @@ const ManageFoods = () => {
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
             <div className="overflow-hidden border border-gray-200  md:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="font-bold text-[18px]">
+                <thead className="font-bold text-[18px] bg-[#00BBE4]">
                   <tr>
                     <th
                       scope="col"
@@ -155,7 +155,7 @@ const ManageFoods = () => {
 
                           <Link
                             to={`/update-food/${request?._id}`}
-                            className="hover:text-gray-500 transition-colors duration-200  text-[#42A5F5] focus:outline-none"
+                            className="hover:text-gray-500 transition-colors duration-200  text-[#38f066] focus:outline-none"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
