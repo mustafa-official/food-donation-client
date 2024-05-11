@@ -6,7 +6,7 @@ const FoodRequest = () => {
   const { user } = useAuth();
   const [myRequset, setMyRequset] = useState([]);
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/food-request/${user?.email}`)
+    axios(`${import.meta.env.VITE_API_URL}/food-request/${user?.email}`, {withCredentials: true})
       .then((res) => setMyRequset(res.data))
       .catch((error) => {
         console.log(error);

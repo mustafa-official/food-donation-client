@@ -8,7 +8,7 @@ const ManageFoods = () => {
   const { user } = useAuth();
   const [myFood, setMyFood] = useState([]);
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`)
+    axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`, {withCredentials: true})
       .then((res) => setMyFood(res.data))
       .catch((error) => {
         console.log(error);
