@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { AuthContext } from "../../providers/AuthProvider";
+import axios from "axios";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
@@ -37,11 +38,25 @@ const Register = () => {
         updateProfileInfo(name, photo)
           .then(() => {
             setLoading(false);
-            console.log("profile updated");
+            // console.log("profile updated");
+            axios
+              .post(
+                `${import.meta.env.VITE_API_URL}/jwt`,
+                {
+                  email: result?.user?.email,
+                },
+                { withCredentials: true }
+              )
+              .then((res) => {
+                console.log(res.data);
+                navigate("/");
+                toast.success("Registered Successfully !");
+              })
+              .catch((error) => {
+                console.log(error);
+              });
           })
           .catch((error) => console.log(error));
-        navigate("/");
-        toast.success("Registered Successfully !");
       })
       .catch((error) => {
         setError(error.code);

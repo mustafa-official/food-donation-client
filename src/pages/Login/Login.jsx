@@ -3,20 +3,34 @@ import { Link, ScrollRestoration } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 const Login = () => {
   const { loginUser, googleLogin, user, setUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location);
+  // console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-      .then(() => {
-        navigate(location.state ? location.state : "/");
-        toast.success("Login Successfully");
-        // console.log(result.user);
+      .then((result) => {
+        axios
+          .post(
+            `${import.meta.env.VITE_API_URL}/jwt`,
+            {
+              email: result?.user?.email,
+            },
+            { withCredentials: true }
+          )
+          .then((res) => {
+            console.log(res.data);
+            navigate(location.state ? location.state : "/");
+            toast.success("Login Successfully");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch(() => {
         toast.error("Password doesn't match");
@@ -25,9 +39,23 @@ const Login = () => {
   };
   const handleGoogleLogin = () => {
     googleLogin().then((result) => {
-      toast.success("Login Successfully");
-      navigate(location.state ? location.state : "/");
-      setUser(...user, result.photoURL);
+      axios
+        .post(
+          `${import.meta.env.VITE_API_URL}/jwt`,
+          {
+            email: result?.user?.email,
+          },
+          { withCredentials: true }
+        )
+        .then((res) => {
+          console.log(res.data);
+          toast.success("Login Successfully");
+          navigate(location.state ? location.state : "/");
+          setUser(...user, result.photoURL);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     });
   };
 
