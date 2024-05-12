@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { loginUser, googleLogin, user, setUser } = useContext(AuthContext);
   const location = useLocation();
@@ -68,6 +69,7 @@ const Login = () => {
   //   };
   return (
     <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
+      <Helmet><title>Hey Foods | Login</title></Helmet>
       <div className="w-full mx-auto max-w-md mt-8 lg:mt-6 px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#00BBE4] text-gray-100">
         <h1 className="text-2xl font-bold text-center mb-12">Login</h1>
         <form onSubmit={handleLogin} className="space-y-6">

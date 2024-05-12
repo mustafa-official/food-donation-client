@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ManageFoods = () => {
   const { user } = useAuth();
@@ -48,6 +49,7 @@ const ManageFoods = () => {
 
   return (
     <section className="container px-4 mx-auto pt-12">
+      <Helmet><title>Hey Foods | Manage Foods</title></Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Added Food</h2>
 
@@ -182,6 +184,7 @@ const ManageFoods = () => {
           </div>
         </div>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </section>
   );
 };

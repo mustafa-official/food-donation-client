@@ -6,6 +6,8 @@ import { IoSearch } from "react-icons/io5";
 import { useQuery } from "@tanstack/react-query";
 import ReactLoading from "react-loading";
 import notFound from "../../assets/no.png";
+import { ScrollRestoration } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const AvailableFoods = () => {
   const [search, setSearch] = useState("");
@@ -72,6 +74,7 @@ const AvailableFoods = () => {
     );
   return (
     <div>
+      <Helmet><title>Hey Foods | Available Foods</title></Helmet>
       <h2 className="text-2xl md:text-4xl md:mt-6 mt-8 font-bold text-center">
         Available Foods
       </h2>
@@ -127,6 +130,7 @@ const AvailableFoods = () => {
           <AvailableSingleFood key={food._id} food={food}></AvailableSingleFood>
         ))}
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

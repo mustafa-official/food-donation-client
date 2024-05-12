@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../hooks/useAuth";
 import ReactLoading from "react-loading";
 import axios from "axios";
+import { ScrollRestoration } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const FoodRequest = () => {
   const { user } = useAuth();
@@ -37,6 +39,7 @@ const FoodRequest = () => {
 
   return (
     <section className="container px-4 mx-auto pt-12">
+      <Helmet><title>Hey Foods | Food Request</title></Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Food Requests</h2>
 
@@ -131,6 +134,7 @@ const FoodRequest = () => {
           </div>
         </div>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </section>
   );
 };

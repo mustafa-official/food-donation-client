@@ -1,10 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, ScrollRestoration, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { AuthContext } from "../../providers/AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
@@ -69,6 +70,7 @@ const Register = () => {
   };
   return (
     <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
+      <Helmet><title>Hey Foods | Register</title></Helmet>
       <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#00BBE4] text-gray-100">
         <h1 className="text-2xl font-bold text-center mb-12">Register</h1>
         <form onSubmit={handleRegister} className="space-y-6">
@@ -136,6 +138,7 @@ const Register = () => {
           </Link>
         </p>
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

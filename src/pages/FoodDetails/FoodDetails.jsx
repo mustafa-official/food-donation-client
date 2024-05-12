@@ -1,4 +1,8 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import {
+  ScrollRestoration,
+  useLoaderData,
+  useNavigate,
+} from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -6,6 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const FoodDetails = () => {
   const food = useLoaderData();
@@ -60,6 +65,9 @@ const FoodDetails = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>{`Hey Foods | ${food_name}`}</title>
+      </Helmet>
       <h2 className="my-6 text-2xl font-bold">Donator Information</h2>
       <div className="max-w-md flex flex-col md:flex-row gap-5 md:items-center bg-gray-900 text-gray-100">
         <div className="flex-shrink-0 mb-12 md:w-40 w-36 h-36 md:h-40">
@@ -103,7 +111,10 @@ const FoodDetails = () => {
                 Quantity: <span className="font-bold">{food_quantity}</span>
               </p>
               <p>
-                Expired Date: <span className="font-bold">{new Date(expired_date).toLocaleDateString()}</span>
+                Expired Date:{" "}
+                <span className="font-bold">
+                  {new Date(expired_date).toLocaleDateString()}
+                </span>
               </p>
             </div>
           </div>
@@ -255,6 +266,7 @@ const FoodDetails = () => {
           </div>
         )}
       </div>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

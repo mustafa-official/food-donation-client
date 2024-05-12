@@ -1,10 +1,11 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useNavigate } from "react-router-dom";
+import { ScrollRestoration, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddFood = () => {
   const { user } = useAuth();
@@ -56,6 +57,7 @@ const AddFood = () => {
   };
   return (
     <div className="w-full mx-auto md:max-w-3xl md:mt-8 mt-5">
+      <Helmet><title>Hey Foods | Add Food</title></Helmet>
       <form
         onSubmit={handleRequest}
         className="mt-4 sm:flex sm:items-center sm:-mx-2 border border-[#00BBE4] py-8 rounded-xl px-6"
@@ -188,6 +190,7 @@ const AddFood = () => {
           </div>
         </div>
       </form>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };

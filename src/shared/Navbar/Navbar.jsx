@@ -68,7 +68,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="navbar h-20 px-0 md:px-4 lg:px-12 ">
+      <div className="navbar backdrop-blur-md h-20 px-0 md:px-4 lg:px-12 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -93,7 +93,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu z-50 menu-sm backdrop-blur-lg text-white dropdown-content p-2 border border-[#00BBE4]   mt-4 rounded-box min-h-[calc(100vh-80px)] w-56"
+              className="menu z-50 menu-sm  bg-white text-black dropdown-content p-2 border border-[#00BBE4]   mt-4 rounded-box min-h-[calc(100vh-80px)] w-56"
             >
               <div className="flex lg:justify-normal justify-center lg:flex-row flex-col lg:mt-0 mt-4 items-center gap-3">
                 {/* navlink for phone */}

@@ -14,13 +14,13 @@ const SingleFoods = ({ food }) => {
   } = food || {};
 
   return (
-    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 space-y-6  h-full  border-2 hover:border-[#00BBE4] border-gray-300 border-t-[#00BBE4] border-l-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
       <div className="flex-grow">
         <div className="rounded-lg">
           <img
             src={food_image}
             alt=""
-            className="object-cover rounded-md  hover:scale-105 transition-all  w-full mb-4 h-52 md:h-60 mx-auto"
+            className="object-cover rounded-md  w-full mb-4 h-52 md:h-60 mx-auto"
           />
         </div>
 
