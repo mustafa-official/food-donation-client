@@ -3,6 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import { Tooltip } from "react-tooltip";
 import { Button } from "@material-tailwind/react";
 import toast from "react-hot-toast";
+import logo from "../../assets/lgopizza.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
@@ -103,9 +104,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/">
-            <h2 className="text-xl md:text-2xl text-[#00BBE4] font-black ">
-              Pizza House
-            </h2>
+            <img className="max-w-36 md:max-w-52" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -115,7 +114,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="navbar-end pr-4 lg:pr-0">
+        <div className="navbar-end pr-5">
           <div className="flex items-center gap-3 lg:flex">
             {user ? (
               <>
@@ -154,7 +153,7 @@ const Navbar = () => {
               <>
                 <Link to="/login">
                   <Button
-                    className="bg-[#00BBE4] font-grotesk"
+                    className="bg-[#00BBE4] font-grotesk hover:bg-transparent border border-[#00BBE4]"
                     style={{
                       textTransform: "capitalize",
                       fontSize: "16px",

@@ -16,7 +16,7 @@ const AvailableSingleFood = ({ food }) => {
     _id,
   } = food || {};
   return (
-    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 lg:p-6 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
       <div className="flex-grow">
         <div className="rounded-lg">
           <img

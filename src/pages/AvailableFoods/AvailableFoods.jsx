@@ -92,7 +92,7 @@ const AvailableFoods = () => {
 
               <button
                 type="submit"
-                className="px-3 ml-2 bg-[#00BBE4]  md:px-3 py-2 text-xl  tracking-wider  transition-colors duration-300 transform  rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
+                className="px-3 ml-2 bg-[#00BBE4]  md:px-3 py-2 text-xl  tracking-wider  transition-colors duration-300 transform  rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
               >
                 <IoSearch></IoSearch>
               </button>
