@@ -8,8 +8,10 @@ const Home = () => {
     <section>
       <Helmet><title>Hey Foods</title></Helmet>
       <Banner></Banner>
+      <div className="px-6 lg:px-12">
       <FeaturedFoods></FeaturedFoods>
       <ScrollRestoration></ScrollRestoration>
+      </div>
     </section>
   );
 };

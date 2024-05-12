@@ -18,15 +18,11 @@ body {
     z-index: 1000;
     width: 100%;
     height: 100%;
-
 }
 
 .modal-open {
     overflow: hidden;
-
 }
-
-
 
 
 @tailwind base;

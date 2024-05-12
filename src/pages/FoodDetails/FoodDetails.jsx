@@ -75,7 +75,7 @@ const FoodDetails = () => {
     document.body.classList.remove("modal-open");
   };
   return (
-    <div>
+    <div className="px-6 lg:px-12">
       <Helmet>
         <title>{`Hey Foods | ${food_name}`}</title>
       </Helmet>
@@ -150,7 +150,7 @@ const FoodDetails = () => {
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex backdrop-blur-md items-end justify-center min-h-screen px-4 pt-4  text-center sm:block sm:p-0">
+            <div className="flex  items-end justify-center min-h-screen px-4 pt-4  text-center sm:block sm:p-0">
               <span
                 className="hidden sm:inline-block sm:h-screen sm:align-middle"
                 aria-hidden="true"
@@ -158,9 +158,9 @@ const FoodDetails = () => {
                 &#8203;
               </span>
 
-              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
+              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-transparent backdrop-blur-md border-2  bg-[#ffffff34] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
                 <h3
-                  className="text-lg font-medium text-gray-800 capitalize dark:text-white"
+                  className="text-lg font-medium text-white capitalize dark:text-white"
                   id="modal-title"
                 >
                   Request Here
@@ -175,7 +175,7 @@ const FoodDetails = () => {
                     <div>
                       <div className="grid grid-cols-1 gap-x-4 gap-y-2 mt-2 md:grid-cols-2">
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Food Name
                           </label>
 
@@ -183,96 +183,96 @@ const FoodDetails = () => {
                             disabled
                             defaultValue={food_name}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1  text-black bg-white border border-black  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1  text-[#ffffff] bg-[#ffffff69] border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Food Image URL
                           </label>
                           <input
                             disabled
                             defaultValue={food_image}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Donator Name
                           </label>
                           <input
                             disabled
                             defaultValue={donator_name}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Donator Email
                           </label>
                           <input
                             disabled
                             defaultValue={donator_email}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Pickup Location
                           </label>
                           <input
                             disabled
                             defaultValue={pickup_location}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             User Email
                           </label>
                           <input
                             disabled
                             defaultValue={user?.email}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Food Id
                           </label>
                           <input
                             disabled
                             defaultValue={_id}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Expired Date
                           </label>
                           <input
                             disabled
                             defaultValue={expired_date}
                             type="text"
-                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#ffffff] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div className="flex flex-col">
-                          <label className="text-xs" htmlFor="">
+                          <label className="text-xs text-white" htmlFor="">
                             Request Date
                           </label>
                           <DatePicker
                             disabled
-                            className="border py-1 pr-24 pl-2 mt-2 rounded-md w-full text-black border-black"
+                            className="border py-2  pr-24 pl-2 mt-2 bg-[#ffffff69] rounded-md w-full text-black "
                             selected={startDate}
                             onChange={(date) => setStartDate(date)}
                           />
@@ -281,7 +281,7 @@ const FoodDetails = () => {
 
                       <textarea
                         defaultValue={additional_notes}
-                        className="w-full border border-black rounded-md text-black mt-6 p-3"
+                        className="w-full border  rounded-md text-black mt-6 p-3"
                         rows={3}
                         name="additionalNotes"
                         placeholder="Write your think"
@@ -300,7 +300,7 @@ const FoodDetails = () => {
                       <div className="w-[250px]">
                         <button
                           type="submit"
-                          className="py-2 md:px-0 px-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                          className="py-2 md:px-0 px-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#00BBE4] rounded-md sm:mt-0 sm:w-1/2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
                         >
                           Request Now
                         </button>

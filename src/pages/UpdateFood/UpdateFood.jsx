@@ -61,14 +61,14 @@ const UpdateFood = () => {
       });
   };
   return (
-    <div className="w-full mx-auto md:max-w-3xl md:mt-8 mt-5">
+    <div className="w-full mx-auto md:max-w-3xl px-6 lg:px-12 md:mt-8 mt-5">
       <Helmet><title>Hey Foods | Update Food</title></Helmet>
       <form
         onSubmit={handleUpdate}
-        className="mt-4 sm:flex sm:items-center sm:-mx-2 border border-[#00BBE4] py-8 rounded-xl px-6"
+        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff11] bg-transparent py-8 rounded-xl px-6"
       >
         <div className="flex flex-col gap-4 w-full">
-          <h1 className="text-2xl font-bold text-center">Update Food</h1>
+          <h1 className="text-2xl font-bold text-center">Update Your Food</h1>
           <div>
             <div className="grid grid-cols-1 gap-x-6 gap-y-4 mt-4 md:grid-cols-2">
               <div>
@@ -186,7 +186,7 @@ const UpdateFood = () => {
           <div className="w-[300px] flex">
             <button
               type="submit"
-              className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+              className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#00BBE4] rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
             >
               Update
             </button>

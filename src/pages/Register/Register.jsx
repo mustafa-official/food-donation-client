@@ -69,9 +69,9 @@ const Register = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="px-5 md:px-10 pt-1 pb-8 lg:px-14">
+    <div className="md:px-10 pt-1 pb-8  px-6 lg:px-12">
       <Helmet><title>Hey Foods | Register</title></Helmet>
-      <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border border-[#00BBE4] text-gray-100">
+      <div className="w-full mx-auto mt-8 lg:mt-6 max-w-md px-4 md:px-8 py-8 mb-3 lg:mb-5 space-y-2 rounded-xl border  bg-[#ffffff11] text-gray-100">
         <h1 className="text-2xl font-bold text-center mb-12">Register</h1>
         <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-1 text-sm">

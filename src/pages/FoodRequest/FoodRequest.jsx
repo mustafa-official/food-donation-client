@@ -38,7 +38,7 @@ const FoodRequest = () => {
     );
 
   return (
-    <section className="container px-4 mx-auto pt-12">
+    <section className="container px-6 lg:px-12 mx-auto pt-12">
       <Helmet>
         <title>Hey Foods | Food Request</title>
       </Helmet>

@@ -58,13 +58,13 @@ const AvailableFoods = () => {
 
   if (isLoading)
     return (
-      <div className="flex min-h-[calc(100vh-80px)] justify-center items-center">
+      <div className="flex min-h-[calc(100vh-80px)] justify-center items-center px-6 lg:px-12">
         <ReactLoading type="spin" color="#ffff" height={30} width={30} />
       </div>
     );
   if (availableFoods.length === 0)
     return (
-      <div className="flex flex-col gap-3 justify-center min-h-[calc(80vh-80px)] items-center">
+      <div className="flex flex-col gap-3 justify-center min-h-[calc(80vh-80px)] items-center px-6 lg:px-12">
         <div className="">
           <img className="w-[60%] md:w-[50%] mx-auto" src={notFound} />
         </div>
@@ -73,7 +73,7 @@ const AvailableFoods = () => {
       </div>
     );
   return (
-    <div>
+    <div className="px-6 lg:px-12">
       <Helmet><title>Hey Foods | Available Foods</title></Helmet>
       <h2 className="text-2xl md:text-4xl md:mt-6 mt-8 font-bold text-center">
         Available Foods
@@ -123,7 +123,7 @@ const AvailableFoods = () => {
 
       <div
         className={`mt-8 gap-5 grid grid-cols-1 md:grid-cols-2 ${
-          isTwoColumn ? "lg:grid-cols-2 gap-x-8 gap-y-8" : "lg:grid-cols-3"
+          isTwoColumn ? "lg:grid-cols-2 gap-x-10 gap-y-10" : "lg:grid-cols-3 gap-x-8 gap-y-8"
         }`}
       >
         {availableFoods?.map((food) => (
