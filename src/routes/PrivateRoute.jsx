@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import ReactLoading from "react-loading";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -8,7 +9,7 @@ const PrivateRoute = ({ children }) => {
   if (loading)
     return (
       <div className="flex min-h-[calc(100vh-80px)] justify-center items-center">
-        <span className="loading loading-spinner loading-lg"></span>
+        <ReactLoading type="spin" color="#ffff" height={30} width={30} />
       </div>
     );
 

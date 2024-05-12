@@ -1,25 +1,47 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../hooks/useAuth";
+import ReactLoading from "react-loading";
 import axios from "axios";
 
 const FoodRequest = () => {
   const { user } = useAuth();
-  const [myRequset, setMyRequset] = useState([]);
-  useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/food-request/${user?.email}`, {withCredentials: true})
-      .then((res) => setMyRequset(res.data))
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [user]);
+  // const [myRequset, setMyRequset] = useState([]);
+
+  const { isLoading, data: myRequset } = useQuery({
+    queryKey: ["foodRequest", user],
+    queryFn: async () => {
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/food-request/${user?.email}`,
+        { withCredentials: true }
+      );
+      return res.data;
+    },
+  });
+
+  // useEffect(() => {
+  //   axios(`${import.meta.env.VITE_API_URL}/food-request/${user?.email}`, {withCredentials: true})
+  //     .then((res) => setMyRequset(res.data))
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, [user]);
   //   console.log(myRequset);
+
+  if (isLoading)
+    return (
+      <div className="flex">
+        <ReactLoading type="spin" color="#ffff" height={30} width={30} />
+      </div>
+    );
+
   return (
     <section className="container px-4 mx-auto pt-12">
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Food Requests</h2>
 
         <span className="px-3 py-1 text-xs  bg-[#00BBE4] rounded-full ">
-          {myRequset.length} Requests
+          {myRequset?.length} Requests
         </span>
       </div>
 
