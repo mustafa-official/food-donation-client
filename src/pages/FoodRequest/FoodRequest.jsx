@@ -32,14 +32,16 @@ const FoodRequest = () => {
 
   if (isLoading)
     return (
-      <div className="flex">
+      <div className="flex min-h-[calc(100vh-80px)] justify-center items-center">
         <ReactLoading type="spin" color="#ffff" height={30} width={30} />
       </div>
     );
 
   return (
     <section className="container px-4 mx-auto pt-12">
-      <Helmet><title>Hey Foods | Food Request</title></Helmet>
+      <Helmet>
+        <title>Hey Foods | Food Request</title>
+      </Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Food Requests</h2>
 

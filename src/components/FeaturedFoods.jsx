@@ -45,12 +45,12 @@ const FeaturedFoods = () => {
       <div className="flex justify-center mt-8">
         <Link to="/available-foods">
           <Button
-            className="bg-[#00BBE4] border grotesk font-semibold py-2 rounded-sm border-[#00BBE4] hover:bg-transparent"
+            className="bg-[#00BBE4] border grotesk font-semibold py-3 rounded-md border-[#00BBE4] hover:bg-transparent"
             style={{
               textTransform: "capitalize",
               fontSize: "16px",
             }}
-            size="md"
+            
           >
             See All
           </Button>

@@ -11,6 +11,7 @@ import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { IoIosClose } from "react-icons/io";
 
 const FoodDetails = () => {
   const food = useLoaderData();
@@ -63,13 +64,25 @@ const FoodDetails = () => {
         console.log(error);
       });
   };
+
+  const openModal = () => {
+    setIsOpen(true);
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    document.body.classList.remove("modal-open");
+  };
   return (
     <div>
       <Helmet>
         <title>{`Hey Foods | ${food_name}`}</title>
       </Helmet>
       <h2 className="my-6 text-2xl font-bold">Donator Information</h2>
-      <div className="max-w-md flex flex-col md:flex-row gap-5 md:items-center bg-gray-900 text-gray-100">
+
+      {/* Donator Information */}
+      <div className="max-w-md flex flex-col md:flex-row gap-5 md:items-center text-gray-100">
         <div className="flex-shrink-0 mb-12 md:w-40 w-36 h-36 md:h-40">
           <img
             src={donator_image}
@@ -120,7 +133,7 @@ const FoodDetails = () => {
           </div>
 
           <button
-            onClick={() => setIsOpen(true)}
+            onClick={() => openModal()}
             type="button"
             className="h-10 px-6 py-2 mt-6 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400"
           >
@@ -137,7 +150,7 @@ const FoodDetails = () => {
             role="dialog"
             aria-modal="true"
           >
-            <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div className="flex backdrop-blur-md items-end justify-center min-h-screen px-4 pt-4  text-center sm:block sm:p-0">
               <span
                 className="hidden sm:inline-block sm:h-screen sm:align-middle"
                 aria-hidden="true"
@@ -145,119 +158,153 @@ const FoodDetails = () => {
                 &#8203;
               </span>
 
-              <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl dark:bg-gray-900 sm:my-8 w-[80%] md:w-[70%] lg:w-[50%] sm:p-6 sm:align-middle">
+              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
                 <h3
-                  className="text-lg font-medium leading-6 text-gray-800 capitalize dark:text-white"
+                  className="text-lg font-medium text-gray-800 capitalize dark:text-white"
                   id="modal-title"
                 >
                   Request Here
                 </h3>
 
+                {/* Request Now */}
                 <form
                   onSubmit={handleRequest}
-                  className="mt-4 sm:flex sm:items-center sm:-mx-2"
+                  className="sm:flex sm:items-center sm:-mx-2 px-2"
                 >
-                  <div className="flex flex-col gap-8 w-full">
+                  <div className="flex flex-col gap-3 w-full text-black">
                     <div>
-                      <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2">
+                      <div className="grid grid-cols-1 gap-x-4 gap-y-2 mt-2 md:grid-cols-2">
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Food Name
+                          </label>
+
                           <input
                             disabled
                             defaultValue={food_name}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1  text-black bg-white border border-black  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Food Image URL
+                          </label>
                           <input
                             disabled
                             defaultValue={food_image}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Donator Name
+                          </label>
                           <input
                             disabled
                             defaultValue={donator_name}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Donator Email
+                          </label>
                           <input
                             disabled
                             defaultValue={donator_email}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Pickup Location
+                          </label>
                           <input
                             disabled
                             defaultValue={pickup_location}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            User Email
+                          </label>
                           <input
                             disabled
                             defaultValue={user?.email}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Food Id
+                          </label>
                           <input
                             disabled
                             defaultValue={_id}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
 
                         <div>
+                          <label className="text-xs" htmlFor="">
+                            Expired Date
+                          </label>
                           <input
                             disabled
-                            defaultValue={pickup_location}
+                            defaultValue={expired_date}
                             type="text"
-                            className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-1 mt-1 text-black bg-white border border-black rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                           />
                         </div>
-                        <div className="mt-2">
+                        <div className="flex flex-col">
+                          <label className="text-xs" htmlFor="">
+                            Request Date
+                          </label>
                           <DatePicker
                             disabled
-                            className="border p-2 rounded-lg w-full text-gray-700"
+                            className="border py-1 pr-24 pl-2 mt-2 rounded-md w-full text-black border-black"
                             selected={startDate}
                             onChange={(date) => setStartDate(date)}
                           />
                         </div>
                       </div>
+
                       <textarea
                         defaultValue={additional_notes}
-                        className="w-full border border-gray-200 rounded-md text-black mt-6 p-3"
+                        className="w-full border border-black rounded-md text-black mt-6 p-3"
                         rows={3}
                         name="additionalNotes"
                         placeholder="Write your think"
                       ></textarea>
                     </div>
-                    <div className="flex">
-                      <button
-                        onClick={() => setIsOpen(false)}
-                        className="w-full px-4 py-2 text-sm font-medium tracking-wide text-gray-700 capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:w-1/2 sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
-                      >
-                        Cancel
-                      </button>
+                    <div className="">
+                      <div className="absolute top-3 right-3">
+                        <button
+                          onClick={() => closeModal()}
+                          className="text-3xl font-bold text-black bg-base-200 rounded-md hover:bg-base-300"
+                        >
+                          <IoIosClose></IoIosClose>
+                        </button>
+                      </div>
 
-                      <button
-                        type="submit"
-                        className="w-full px-4 py-2 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
-                      >
-                        Request Now
-                      </button>
+                      <div className="w-[250px]">
+                        <button
+                          type="submit"
+                          className="py-2 md:px-0 px-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+                        >
+                          Request Now
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </form>

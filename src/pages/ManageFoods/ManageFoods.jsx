@@ -157,7 +157,7 @@ const ManageFoods = () => {
 
                           <Link
                             to={`/update-food/${request?._id}`}
-                            className="hover:text-gray-500 transition-colors duration-200  text-[#38f066] focus:outline-none"
+                            className="text-gray-500 transition-colors duration-200  hover:text-[#6ef74b] focus:outline-none"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
