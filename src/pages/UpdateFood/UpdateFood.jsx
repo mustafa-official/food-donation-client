@@ -1,4 +1,8 @@
-import { ScrollRestoration, useLoaderData, useNavigate } from "react-router-dom";
+import {
+  ScrollRestoration,
+  useLoaderData,
+  useNavigate,
+} from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -62,7 +66,9 @@ const UpdateFood = () => {
   };
   return (
     <div className="w-full mx-auto md:max-w-3xl px-6 lg:px-12 md:mt-8 mt-5">
-      <Helmet><title>Hey Foods | Update Food</title></Helmet>
+      <Helmet>
+        <title>Pizza House | Update Food</title>
+      </Helmet>
       <form
         onSubmit={handleUpdate}
         className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff11] bg-transparent py-8 rounded-xl px-6"

@@ -23,7 +23,6 @@ const FoodDetails = () => {
   const {
     food_image,
     food_name,
-    donator_image,
     donator_name,
     food_quantity,
     pickup_location,
@@ -75,14 +74,14 @@ const FoodDetails = () => {
     document.body.classList.remove("modal-open");
   };
   return (
-    <div className="px-6 lg:px-12">
+    <div className="px-6 lg:px-12 lg:mt-10">
       <Helmet>
-        <title>{`Hey Foods | ${food_name}`}</title>
+        <title>{`Pizza House | ${food_name}`}</title>
       </Helmet>
-      <h2 className="my-6 text-2xl font-bold">Donator Information</h2>
+      {/* <h2 className="my-6 text-2xl font-bold">Donator Information</h2> */}
 
       {/* Donator Information */}
-      <div className="max-w-md flex flex-col md:flex-row gap-5 md:items-center text-gray-100">
+      {/* <div className="max-w-md flex flex-col md:flex-row gap-5 md:items-center text-gray-100">
         <div className="flex-shrink-0 mb-12 md:w-40 w-36 h-36 md:h-40">
           <img
             src={donator_image}
@@ -102,7 +101,7 @@ const FoodDetails = () => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto lg:flex-row lg:items-center">
         <div className="w-full">
@@ -120,7 +119,14 @@ const FoodDetails = () => {
 
             <div className="mt-4">
               <p>{additional_notes}</p>
-              <p className="mt-5 mb-2">
+              <p className="mt-4 mb-1">
+                Donator: <span className="font-bold">{donator_name}</span>
+              </p>
+              <p className="flex items-center gap-1">
+                <SlLocationPin className="text-[16px]"></SlLocationPin>{" "}
+                {pickup_location}
+              </p>
+              <p className="mt-4 mb-1">
                 Quantity: <span className="font-bold">{food_quantity}</span>
               </p>
               <p>
@@ -135,7 +141,7 @@ const FoodDetails = () => {
           <button
             onClick={() => openModal()}
             type="button"
-            className="h-10 px-6 py-2 mt-6 text-white transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400"
+            className="h-10 px-6 py-2 mt-6 text-white transition-colors duration-300 transform bg-[#00BBE4] rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400"
           >
             Request
           </button>

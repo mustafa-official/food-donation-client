@@ -104,7 +104,7 @@ const Navbar = () => {
 
           <Link to="/">
             <h2 className="text-xl md:text-2xl text-[#00BBE4] font-black ">
-              Hey Foods
+              Pizza House
             </h2>
           </Link>
         </div>

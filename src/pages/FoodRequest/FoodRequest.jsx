@@ -40,7 +40,7 @@ const FoodRequest = () => {
   return (
     <section className="container px-6 lg:px-12 mx-auto pt-12">
       <Helmet>
-        <title>Hey Foods | Food Request</title>
+        <title>Pizza House | Food Request</title>
       </Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Food Requests</h2>

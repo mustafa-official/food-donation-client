@@ -14,6 +14,7 @@ const Slide = () => {
   return (
     <>
       <Swiper
+      id="swiper-color"
         spaceBetween={30}
         effect={"fade"}
         navigation={true}
@@ -21,6 +22,11 @@ const Slide = () => {
         pagination={{
           clickable: true,
         }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         className="mySwiper"
         style={{ zIndex: 0 }}

@@ -57,7 +57,9 @@ const AddFood = () => {
   };
   return (
     <div className="w-full mx-auto md:max-w-3xl md:mt-8 mt-5 px-6 lg:px-12">
-      <Helmet><title>Hey Foods | Add Food</title></Helmet>
+      <Helmet>
+        <title>Pizza House | Add Food</title>
+      </Helmet>
       <form
         onSubmit={handleRequest}
         className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-transparent bg-[#ffffff11] py-8 rounded-xl px-6"

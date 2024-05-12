@@ -6,11 +6,13 @@ import { Helmet } from "react-helmet-async";
 const Home = () => {
   return (
     <section>
-      <Helmet><title>Hey Foods</title></Helmet>
+      <Helmet>
+        <title>Pizza House</title>
+      </Helmet>
       <Banner></Banner>
       <div className="px-6 lg:px-12">
-      <FeaturedFoods></FeaturedFoods>
-      <ScrollRestoration></ScrollRestoration>
+        <FeaturedFoods></FeaturedFoods>
+        <ScrollRestoration></ScrollRestoration>
       </div>
     </section>
   );

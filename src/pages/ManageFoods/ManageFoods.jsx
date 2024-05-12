@@ -9,7 +9,9 @@ const ManageFoods = () => {
   const { user } = useAuth();
   const [myFood, setMyFood] = useState([]);
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`, {withCredentials: true})
+    axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`, {
+      withCredentials: true,
+    })
       .then((res) => setMyFood(res.data))
       .catch((error) => {
         console.log(error);
@@ -49,7 +51,9 @@ const ManageFoods = () => {
 
   return (
     <section className="container px-6 lg:px-12 mx-auto pt-12">
-      <Helmet><title>Hey Foods | Manage Foods</title></Helmet>
+      <Helmet>
+        <title>Pizza House | Manage Foods</title>
+      </Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Added Food</h2>
 

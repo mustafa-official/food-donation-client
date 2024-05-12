@@ -4,7 +4,9 @@ import { Link, ScrollRestoration } from "react-router-dom";
 const ErrorPage = () => {
   return (
     <section className="flex items-center h-screen px-6 lg:px-12 p-8 lg:p-16 bg-gray-900 text-gray-100">
-      <Helmet><title>Hey Foods | Error</title></Helmet>
+      <Helmet>
+        <title>Pizza House | Error</title>
+      </Helmet>
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <div className="max-w-md text-center">
           <h2 className="mb-8 font-extrabold text-7xl lg:text-9xl text-gray-600">

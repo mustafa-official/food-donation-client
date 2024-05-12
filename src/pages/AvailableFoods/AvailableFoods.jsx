@@ -69,12 +69,13 @@ const AvailableFoods = () => {
           <img className="w-[60%] md:w-[50%] mx-auto" src={notFound} />
         </div>
         <p className="text-[12px] md:text-[16px]">No Data Found !</p>
-       
       </div>
     );
   return (
     <div className="px-6 lg:px-12">
-      <Helmet><title>Hey Foods | Available Foods</title></Helmet>
+      <Helmet>
+        <title>Pizza House | Available Foods</title>
+      </Helmet>
       <h2 className="text-2xl md:text-4xl md:mt-6 mt-8 font-bold text-center">
         Available Foods
       </h2>
@@ -83,15 +84,15 @@ const AvailableFoods = () => {
           <form onSubmit={handleSearch} className="bg-white rounded-md">
             <div className="flex p-1 overflow-hidden rounded-md focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
               <input
-                className="md:px-4 md:py-2 pl-2 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
+                className="md:px-3 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
                 type="text"
                 name="search"
-                placeholder="Enter food name"
+                placeholder="Search food name"
               />
 
               <button
                 type="submit"
-                className="px-3 ml-2 bg-[#00BBE4]  md:px-3 py-3 text-xl  tracking-wider  transition-colors duration-300 transform  rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
+                className="px-3 ml-2 bg-[#00BBE4]  md:px-3 py-2 text-xl  tracking-wider  transition-colors duration-300 transform  rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none"
               >
                 <IoSearch></IoSearch>
               </button>
@@ -103,7 +104,7 @@ const AvailableFoods = () => {
             onChange={handleExpiredDate}
             name="category"
             id="category"
-            className=" bg-[#00BBE4] text-white md:py-[14px] px-2 py-[10px] md:px-4 rounded-md"
+            className=" bg-[#00BBE4] text-white md:py-[10px] px-2 py-[10px] md:px-4 rounded-md"
           >
             <option>Sort by</option>
             <option value="asc">Ascending</option>
@@ -123,7 +124,9 @@ const AvailableFoods = () => {
 
       <div
         className={`mt-8 gap-5 grid grid-cols-1 md:grid-cols-2 ${
-          isTwoColumn ? "lg:grid-cols-2 gap-x-10 gap-y-10" : "lg:grid-cols-3 gap-x-8 gap-y-8"
+          isTwoColumn
+            ? "lg:grid-cols-2 gap-x-10 gap-y-10"
+            : "lg:grid-cols-3 gap-x-8 gap-y-8"
         }`}
       >
         {availableFoods?.map((food) => (

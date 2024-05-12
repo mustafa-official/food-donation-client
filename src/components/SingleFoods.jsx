@@ -55,7 +55,7 @@ const SingleFoods = ({ food }) => {
       <div>
         <Link
           to={`/food-details/${_id}`}
-          className="px-5 text-center py-2.5 relative rounded group font-medium w-full text-white  inline-block"
+          className="px-5 text-center py-2.5 relative border border-[#00BBE4] rounded group font-medium w-full text-white  inline-block"
         >
           <span className="absolute top-0 left-0 w-full h-full rounded opacity-60 filter blur-sm bg-gradient-to-br from-[#00BBE4] to-gray-900"></span>
           <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 filter group-active:opacity-0 rounded opacity-60 from-[#00BBE4] to-gray-900"></span>

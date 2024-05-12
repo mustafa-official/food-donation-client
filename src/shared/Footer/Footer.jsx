@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className="mx-auto flex justify-center">
           <Link to="/">
-            <h2 className="text-xl text-[#00BBE4] font-bold ">Hey Food</h2>
+            <h2 className="text-xl text-[#00BBE4] font-bold ">Pizza House</h2>
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-x-5 mx-auto text-sm gap-y-5 lg:gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -168,7 +168,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-6 text-sm text-center text-gray-400">
-        © 2024 Hey Foods. All rights reserved.
+        © 2024 Pizza House. All rights reserved.
       </div>
     </footer>
   );

@@ -8,9 +8,6 @@ body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-
-
-/* CSS */
 .modal {
     position: fixed;
     top: 0;
@@ -22,6 +19,16 @@ body {
 
 .modal-open {
     overflow: hidden;
+}
+
+#swiper-color .swiper-button-next {
+    color: #00BBE4;
+}
+#swiper-color .swiper-button-prev {
+    color: #00BBE4;
+}
+.swiper-pagination-bullet-active {
+    background-color: #00BBE4 !important;
 }
 
 
