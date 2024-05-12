@@ -4,19 +4,40 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Link, ScrollRestoration } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useQuery } from "@tanstack/react-query";
+import ReactLoading from "react-loading";
 
 const ManageFoods = () => {
   const { user } = useAuth();
-  const [myFood, setMyFood] = useState([]);
+  // const [myFood, setMyFood] = useState([]);
+  const [myFoodData, setMyFoodData] = useState([]);
+
+  const { isLoading, data: myQueryFood } = useQuery({
+    queryKey: ["manageFoods", user],
+    queryFn: async () => {
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`,
+        { withCredentials: true }
+      );
+      return res.data;
+    },
+  });
+
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`, {
-      withCredentials: true,
-    })
-      .then((res) => setMyFood(res.data))
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [user]);
+    if (myQueryFood) {
+      setMyFoodData(myQueryFood);
+    }
+  }, [myQueryFood]);
+
+  // useEffect(() => {
+  //   axios(`${import.meta.env.VITE_API_URL}/manage-food/${user?.email}`, {
+  //     withCredentials: true,
+  //   })
+  //     .then((res) => setMyFood(res.data))
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, [user]);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -33,8 +54,8 @@ const ManageFoods = () => {
           .delete(`${import.meta.env.VITE_API_URL}/remove-food/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
-              const remaining = myFood.filter((food) => food._id !== id);
-              setMyFood(remaining);
+              const remaining = myQueryFood.filter((food) => food._id !== id);
+              setMyFoodData(remaining);
             }
             Swal.fire({
               title: "Deleted!",
@@ -49,6 +70,12 @@ const ManageFoods = () => {
     });
   };
 
+  if (isLoading)
+    return (
+      <div className="flex min-h-[calc(100vh-80px)] justify-center items-center">
+        <ReactLoading type="spin" color="#ffff" height={30} width={30} />
+      </div>
+    );
   return (
     <section className="container px-6 lg:px-12 mx-auto pt-12">
       <Helmet>
@@ -58,7 +85,7 @@ const ManageFoods = () => {
         <h2 className="text-xl font-medium  ">Added Food</h2>
 
         <span className="px-3 py-1 text-xs  bg-[#00BBE4] rounded-full ">
-          {myFood.length} Foods
+          {myFoodData.length} Foods
         </span>
       </div>
 
@@ -117,7 +144,7 @@ const ManageFoods = () => {
                   </tr>
                 </thead>
                 <tbody className=" divide-y divide-gray-200 ">
-                  {myFood.map((request) => (
+                  {myFoodData.map((request) => (
                     <tr key={request._id}>
                       <td className="px-4 py-4 text-sm   whitespace-nowrap">
                         {request?.food_name}

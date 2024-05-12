@@ -19,6 +19,7 @@ const FoodDetails = () => {
   const [startDate, setStartDate] = useState(new Date());
   const navigate = useNavigate();
   const { user } = useAuth();
+  // console.log(navigation.state);
 
   const {
     food_image,
@@ -73,6 +74,7 @@ const FoodDetails = () => {
     setIsOpen(false);
     document.body.classList.remove("modal-open");
   };
+
   return (
     <div className="px-6 lg:px-12 lg:mt-10">
       <Helmet>
@@ -164,7 +166,7 @@ const FoodDetails = () => {
                 &#8203;
               </span>
 
-              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-transparent backdrop-blur-md border-2  bg-[#ffffff34] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
+              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-transparent backdrop-blur-md border-2  bg-[#ffffff46] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
                 <h3
                   className="text-lg font-medium text-white capitalize dark:text-white"
                   id="modal-title"
@@ -287,7 +289,7 @@ const FoodDetails = () => {
 
                       <textarea
                         defaultValue={additional_notes}
-                        className="w-full border  rounded-md text-black mt-6 p-3"
+                        className="w-full border border-[#00BBE4] rounded-md text-black mt-6 p-3"
                         rows={3}
                         name="additionalNotes"
                         placeholder="Write your think"

@@ -62,7 +62,7 @@ const AddFood = () => {
       </Helmet>
       <form
         onSubmit={handleRequest}
-        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-transparent bg-[#ffffff11] py-8 rounded-xl px-6"
+        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-transparent bg-[#ffffff3d] py-8 rounded-xl px-6"
       >
         <div className="flex flex-col gap-4 w-full">
           <h1 className="text-2xl font-bold text-center">Add Food</h1>

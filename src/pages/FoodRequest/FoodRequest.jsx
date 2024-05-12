@@ -105,7 +105,7 @@ const FoodRequest = () => {
                   </tr>
                 </thead>
                 <tbody className=" divide-y divide-gray-200 ">
-                  {myRequset.map((request) => (
+                  {myRequset?.map((request) => (
                     <tr key={request._id}>
                       <td className="px-4 py-4 text-sm   whitespace-nowrap">
                         {request?.food_name}

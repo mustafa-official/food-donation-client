@@ -71,7 +71,7 @@ const UpdateFood = () => {
       </Helmet>
       <form
         onSubmit={handleUpdate}
-        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff11] bg-transparent py-8 rounded-xl px-6"
+        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff3d] bg-transparent py-8 rounded-xl px-6"
       >
         <div className="flex flex-col gap-4 w-full">
           <h1 className="text-2xl font-bold text-center">Update Your Food</h1>
