@@ -1,8 +1,14 @@
-# React + Vite
+# Pizza House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website: https://assignment-eleven-d78bd.web.app
 
-Currently, two official plugins are available:
+## About this Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create an Account
+- Login System
+- User-Friendly Interface.
+- Responsive for all devices.
+- After create an account can see details about this Food.
+- When create an account after user can add own food from 'Add Food' page and manage this food like update and delete from 'Manage My Foods' page.
+- User can food request 
+- Search specific food by food name.
