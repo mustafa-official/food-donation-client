@@ -85,14 +85,14 @@ const ManageFoods = () => {
         <h2 className="text-xl font-medium  ">Added Food</h2>
 
         <span className="px-3 py-1 text-xs  bg-[#00BBE4] rounded-full ">
-          {myFoodData.length} Foods
+          {myFoodData?.length} Foods
         </span>
       </div>
 
       <div className="flex flex-col mt-6">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-            <div className="overflow-hidden border border-gray-200  md:rounded-lg">
+            <div className="border border-gray-200  md:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="font-bold text-[18px] bg-[#00BBE4]">
                   <tr>
@@ -144,7 +144,7 @@ const ManageFoods = () => {
                   </tr>
                 </thead>
                 <tbody className=" divide-y divide-gray-200 ">
-                  {myFoodData.map((request) => (
+                  {myFoodData?.map((request) => (
                     <tr key={request._id}>
                       <td className="px-4 py-4 text-sm   whitespace-nowrap">
                         {request?.food_name}

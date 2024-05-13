@@ -11,4 +11,4 @@ Website: https://assignment-eleven-d78bd.web.app
 - After create an account can see details about this Food.
 - When create an account after user can add own food from 'Add Food' page and manage this food like update and delete from 'Manage My Foods' page.
 - User can food request 
-- Search specific food by food name.
+- Search specific food by food name from 'Available Foods' page.

@@ -1,9 +1,10 @@
 import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import useAuth from "../hooks/useAuth";
 
 const SingleFoods = ({ food }) => {
-  //   console.log(food);
+  const {user} = useAuth()
   const {
     food_image,
     food_name,
@@ -42,7 +43,7 @@ const SingleFoods = ({ food }) => {
         <div className="flex mt-4 items-center gap-x-2">
           <img
             className="object-cover w-9 h-9 border-2 border-[#00BBE4] rounded-full"
-            src={donator_image}
+            src={donator_image ? donator_image : user?.photoURL}
             alt=""
           />
 

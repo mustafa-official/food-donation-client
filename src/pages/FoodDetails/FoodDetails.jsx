@@ -166,7 +166,7 @@ const FoodDetails = () => {
                 &#8203;
               </span>
 
-              <div className="relative inline-block px-4 pt-5 overflow-hidden text-left align-bottom transition-all transform bg-transparent backdrop-blur-md border-2  bg-[#ffffff46] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
+              <div className="relative inline-block px-4 pt-5  text-left align-bottom transition-all transform bg-transparent backdrop-blur-md border-2  bg-[#ffffff46] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-4 pb-6 sm:align-middle">
                 <h3
                   className="text-lg font-medium text-white capitalize dark:text-white"
                   id="modal-title"

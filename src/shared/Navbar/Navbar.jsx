@@ -124,10 +124,10 @@ const Navbar = () => {
                     role="button"
                     className="btn btn-ghost btn-circle avatar"
                   >
-                    <div className="w-10 rounded-full">
+                    <div className="w-10 border border-[#00BBE4] rounded-full">
                       <img
                         alt="Tailwind CSS Navbar component"
-                        src={user?.photoURL ? user?.photoURL : ""}
+                        src={user?.photoURL}
                         id="userName"
                       />
                       <Tooltip

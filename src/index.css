@@ -17,9 +17,9 @@ body {
     height: 100%;
 }
 
-.modal-open {
+/* .modal-open {
     overflow: hidden;
-}
+} */
 
 #swiper-color .swiper-button-next {
     color: #00BBE4;

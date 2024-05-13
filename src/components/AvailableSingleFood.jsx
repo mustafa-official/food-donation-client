@@ -1,13 +1,15 @@
 import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import useAuth from "../hooks/useAuth";
 
 const AvailableSingleFood = ({ food }) => {
+  const {user} = useAuth()
   const {
     food_image,
     food_name,
-    // donator_image,
-    // donator_name,
+    donator_image,
+    donator_name,
     food_quantity,
     pickup_location,
     expired_date,
@@ -33,12 +35,25 @@ const AvailableSingleFood = ({ food }) => {
           >
             {additional_notes.slice(0, 80)}...
           </p> */}
-        <p className="text-[16px]  flex items-center mt-4 gap-1 dark:text-gray-600">
-          <SlLocationPin className="text-[16px]"></SlLocationPin>{" "}
+        <p className="text-[15px]  flex items-center mt-1 gap-1 dark:text-gray-600">
+          <SlLocationPin className="text-[15px]"></SlLocationPin>{" "}
           {pickup_location}
         </p>
+        <div className="flex mt-4 items-center gap-x-2">
+          <img
+            className="object-cover w-9 h-9 border-2 border-[#00BBE4] rounded-full"
+            src={donator_image? donator_image : user?.photoURL}
+            alt=""
+          />
+
+          <div>
+            <h1 className="text-sm  text-gray-300 capitalize dark:text-white">
+              {donator_name}
+            </h1>
+          </div>
+        </div>
       </div>
-      <hr />
+      <hr className="border-0 border-t border-dashed border-white my-4" />
       <div className="flex flex-wrap items-center justify-between">
         <p>
           Quantity: <span className="font-bold">{food_quantity}</span>
