@@ -153,7 +153,7 @@ const Navbar = () => {
               <>
                 <Link to="/login">
                   <Button
-                    className="bg-[#00BBE4] font-grotesk hover:bg-transparent border border-[#00BBE4]"
+                    className="bg-[#00BBE4] font-grotesk px-4 py-2 md:px-6 md:py-3 hover:bg-transparent border border-[#00BBE4]"
                     style={{
                       textTransform: "capitalize",
                       fontSize: "16px",

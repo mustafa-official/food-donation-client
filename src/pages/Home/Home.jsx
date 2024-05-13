@@ -3,6 +3,7 @@ import Banner from "../../components/Banner";
 import FeaturedFoods from "../../components/FeaturedFoods";
 import { Helmet } from "react-helmet-async";
 import showup from "../../assets/banner.jpg";
+import Contact from "../../components/Contact";
 
 const Home = () => {
   return (
@@ -24,6 +25,9 @@ const Home = () => {
           backgroundSize: "cover",
         }}
       ></div>
+      <div className="px-6 lg:px-12">
+      <Contact></Contact>
+      </div>
       <ScrollRestoration></ScrollRestoration>
     </section>
   );
