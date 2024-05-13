@@ -11,6 +11,8 @@ const SingleFoods = ({ food }) => {
     pickup_location,
     expired_date,
     _id,
+    donator_name,
+    donator_image,
   } = food || {};
 
   return (
@@ -25,18 +27,33 @@ const SingleFoods = ({ food }) => {
         </div>
 
         <h2 className="mb-1 text-xl font-bold">{food_name}</h2>
+
         {/* <p
           title={additional_notes}
           className="text-[16px] mt-3  flex items-center gap-1 dark:text-gray-600"
         >
           {additional_notes.slice(0, 80)}...
         </p> */}
-        <p className="text-[16px]  flex items-center mt-4 gap-1 dark:text-gray-600">
-          <SlLocationPin className="text-[16px]"></SlLocationPin>{" "}
+        <p className="text-[15px]  flex items-center mt gap-1 dark:text-gray-600">
+          <SlLocationPin className="text-[15px]"></SlLocationPin>{" "}
           {pickup_location}
         </p>
+
+        <div className="flex mt-4 items-center gap-x-2">
+          <img
+            className="object-cover w-9 h-9 border-2 border-[#00BBE4] rounded-full"
+            src={donator_image}
+            alt=""
+          />
+
+          <div>
+            <h1 className="text-sm  text-gray-300 capitalize dark:text-white">
+              {donator_name}
+            </h1>
+          </div>
+        </div>
       </div>
-      <hr />
+      <hr className="border-0 border-t border-dashed border-white my-4" />
       <div className="flex flex-wrap items-center justify-between">
         <p>
           Quantity: <span className="font-bold">{food_quantity}</span>

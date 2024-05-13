@@ -5,6 +5,10 @@ import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
+
 const Login = () => {
   const { loginUser, googleLogin, user, setUser } = useContext(AuthContext);
   const location = useLocation();
@@ -68,7 +72,12 @@ const Login = () => {
   //     });
   //   };
   return (
-    <div className="md:px-10 pt-1 pb-8 px-6 lg:px-12">
+    <div
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="700"
+      className="md:px-10 pt-1 pb-8 px-6 lg:px-12"
+    >
       <Helmet>
         <title>Pizza House | Login</title>
       </Helmet>

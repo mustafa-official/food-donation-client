@@ -1,33 +1,17 @@
 import { Helmet } from "react-helmet-async";
 import { Link, ScrollRestoration } from "react-router-dom";
+import error from "../../assets/error.png";
 
 const ErrorPage = () => {
   return (
-    <section className="flex items-center h-screen px-6 lg:px-12 p-8 lg:p-16 bg-gray-900 text-gray-100">
-      <Helmet>
-        <title>Pizza House | Error</title>
-      </Helmet>
-      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-7xl lg:text-9xl text-gray-600">
-            <span className="sr-only">Error</span>404
-          </h2>
-          <p className="text-2xl font-semibold md:text-3xl">
-            Sorry, we couldnt find this page.
-          </p>
-          <p className="mt-4 mb-8 text-gray-400">
-            But dont worry, you can find plenty of other things on our homepage.
-          </p>
-          <Link
-            to="/"
-            className="px-4 py-3 font-semibold rounded bg-[#00BBE4] "
-          >
-            Back to homepage
-          </Link>
-        </div>
-      </div>
-      <ScrollRestoration></ScrollRestoration>
-    </section>
+   <div className="h-screen flex flex-col justify-center items-center bg-gray-800">
+    <Helmet>
+      <title>Pizza House | Error</title>
+    </Helmet>
+    <img className="w-96" src={error} alt="" />
+    <Link to="/"><button className="bg-[#00BBE4] text-white text-[14px] md:text-[16px] px-4 py-2 rounded-md ">Back to home</button></Link>
+   <ScrollRestoration></ScrollRestoration>
+   </div>
   );
 };
 

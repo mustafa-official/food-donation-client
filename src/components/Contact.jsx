@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import message from "../assets/contact.json";
+import message from "../public/contact.json";
 const Contact = () => {
   return (
     <div className="">

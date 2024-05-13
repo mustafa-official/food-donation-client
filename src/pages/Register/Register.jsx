@@ -6,6 +6,10 @@ import { IoIosEyeOff } from "react-icons/io";
 import { AuthContext } from "../../providers/AuthProvider";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+AOS.init();
+
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
@@ -69,7 +73,12 @@ const Register = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="md:px-10 pt-1 pb-8  px-6 lg:px-12">
+    <div
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="700"
+      className="md:px-10 pt-1 pb-8  px-6 lg:px-12"
+    >
       <Helmet>
         <title>Pizza House | Register</title>
       </Helmet>

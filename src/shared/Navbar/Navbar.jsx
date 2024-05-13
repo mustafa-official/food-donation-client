@@ -114,7 +114,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="navbar-end pr-5">
+        <div className="navbar-end pr-4">
           <div className="flex items-center gap-3 lg:flex">
             {user ? (
               <>

@@ -4,6 +4,7 @@ import FeaturedFoods from "../../components/FeaturedFoods";
 import { Helmet } from "react-helmet-async";
 import showup from "../../assets/banner.jpg";
 import Contact from "../../components/Contact";
+import TrustedCompany from "../../components/TrustedCompany";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
       <div className="px-6 lg:px-12">
         <FeaturedFoods></FeaturedFoods>
       </div>
-
+    <div>
+      <TrustedCompany></TrustedCompany>
+    </div>
       <div
         className="mt-14 h-[300px]  md:h-[600px]"
         style={{
