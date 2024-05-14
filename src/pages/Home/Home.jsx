@@ -2,7 +2,7 @@ import { ScrollRestoration } from "react-router-dom";
 import Banner from "../../components/Banner";
 import FeaturedFoods from "../../components/FeaturedFoods";
 import { Helmet } from "react-helmet-async";
-import showup from "../../assets/banner.jpg";
+import showup from "../../assets/five.png";
 import Contact from "../../components/Contact";
 import TrustedCompany from "../../components/TrustedCompany";
 

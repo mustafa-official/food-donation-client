@@ -32,11 +32,14 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
   //logout user
-  const logOutUser = () => {
+  const logOutUser = async () => {
     setLoading(true);
-    const { data } = axios(`${import.meta.env.VITE_API_URL}/logout`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.post(
+      `${import.meta.env.VITE_API_URL}/logout`,
+      {
+        withCredentials: true,
+      }
+    );
     console.log(data);
     return signOut(auth);
   };

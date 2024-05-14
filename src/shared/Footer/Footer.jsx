@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/lgopizza.png"
 const Footer = () => {
   return (
     <footer className="divide-y mt-8 md:mt-14  bg-[#060419]  text-gray-100">
       <div className="flex flex-col justify-between py-10 space-y-8 lg:flex-row lg:space-y-0">
         <div className="mx-auto flex justify-center">
           <Link to="/">
-            <h2 className="text-xl text-[#00BBE4] font-bold ">Pizza House</h2>
+          <img className="max-w-36 md:max-w-52" src={logo} alt="" />
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-x-5 mx-auto text-sm gap-y-5 lg:gap-y-8 lg:w-2/3 sm:grid-cols-4">

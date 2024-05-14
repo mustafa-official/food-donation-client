@@ -85,7 +85,7 @@ const AvailableFoods = () => {
           <form onSubmit={handleSearch} className="bg-white rounded-md">
             <div className="flex p-1 rounded-md focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
               <input
-                className="md:px-3 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
+                className="px-3 text-black rounded-md placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
                 type="text"
                 name="search"
                 placeholder="Search food name"

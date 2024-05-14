@@ -8,25 +8,28 @@ body {
     font-family: "Space Grotesk", sans-serif;
 }
 
-.modal {
+.modal-container {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
 }
 
 /* .modal-open {
-    overflow: hidden;
+    overflow: auto;
 } */
 
 #swiper-color .swiper-button-next {
     color: #00BBE4;
 }
+
 #swiper-color .swiper-button-prev {
     color: #00BBE4;
 }
+
 .swiper-pagination-bullet-active {
     background-color: #00BBE4 !important;
 }

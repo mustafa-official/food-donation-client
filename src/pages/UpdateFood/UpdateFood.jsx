@@ -71,7 +71,7 @@ const UpdateFood = () => {
       </Helmet>
       <form
         onSubmit={handleUpdate}
-        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff3d] bg-transparent py-8 rounded-xl px-6"
+        className="mt-4 sm:flex sm:items-center sm:-mx-2 border bg-[#ffffff11] py-8 rounded-xl px-6"
       >
         <div className="flex flex-col gap-4 w-full">
           <h1 className="text-2xl font-bold text-center">Update Your Food</h1>
@@ -82,7 +82,7 @@ const UpdateFood = () => {
                   Donator Name
                 </label>
                 <input
-                  disabled
+                  readOnly
                   defaultValue={user?.displayName}
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -93,7 +93,7 @@ const UpdateFood = () => {
                   Donator Email
                 </label>
                 <input
-                  disabled
+                  readOnly
                   defaultValue={user?.email}
                   type="email"
                   className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -104,7 +104,7 @@ const UpdateFood = () => {
                   Donator Image URL
                 </label>
                 <input
-                  disabled
+                  readOnly
                   defaultValue={user?.photoURL}
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
@@ -151,7 +151,7 @@ const UpdateFood = () => {
                 </label>
                 <input
                   name="status"
-                  disabled
+                  readOnly
                   defaultValue="available"
                   type="text"
                   className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"

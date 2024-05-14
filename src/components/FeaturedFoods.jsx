@@ -8,7 +8,7 @@ import ReactLoading from "react-loading";
 const FeaturedFoods = () => {
   // const [foods, setFoods] = useState([]);
 
-  const { isLoading, data: foods } = useQuery({
+  const { isLoading, data: foods =[] } = useQuery({
     queryKey: ["featuredFood"],
     queryFn: async () => {
       const res = await axios.get(
@@ -34,6 +34,8 @@ const FeaturedFoods = () => {
         <ReactLoading type="spin" color="#ffff" height={30} width={30} />
       </div>
     );
+
+    console.log(foods);
   return (
     <div className="mt-8 md:mt-16">
       <h2 className="text-2xl md:text-4xl font-bold text-center">Top Foods</h2>
