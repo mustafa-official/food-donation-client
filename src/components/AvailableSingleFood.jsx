@@ -2,9 +2,10 @@ import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import useAuth from "../hooks/useAuth";
+import { motion } from "framer-motion";
 
 const AvailableSingleFood = ({ food }) => {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const {
     food_image,
     food_name,
@@ -18,7 +19,11 @@ const AvailableSingleFood = ({ food }) => {
     _id,
   } = food || {};
   return (
-    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ duration: 0.3 }}
+      className="flex hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800"
+    >
       <div className="flex-grow">
         <div className="rounded-lg">
           <img
@@ -42,7 +47,7 @@ const AvailableSingleFood = ({ food }) => {
         <div className="flex mt-4 items-center gap-x-2">
           <img
             className="object-cover w-9 h-9 border-2 border-[#00BBE4] rounded-full"
-            src={donator_image? donator_image : user?.photoURL}
+            src={donator_image ? donator_image : user?.photoURL}
             alt=""
           />
 
@@ -81,7 +86,7 @@ const AvailableSingleFood = ({ food }) => {
           <span className="relative">View Details</span>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

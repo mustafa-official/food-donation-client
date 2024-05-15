@@ -31,15 +31,13 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
   //logout user
   const logOutUser = async () => {
     setLoading(true);
-    const { data } = await axios.post(
-      `${import.meta.env.VITE_API_URL}/logout`,
-      {
-        withCredentials: true,
-      }
-    );
+    const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
+      withCredentials: true,
+    });
     console.log(data);
     return signOut(auth);
   };
@@ -67,6 +65,9 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (CurrentUser) => {
       setLoading(false);
       setUser(CurrentUser);
+      // if (CurrentUser) {
+      //   getToken(CurrentUser?.email);
+      // }
     });
 
     return () => {

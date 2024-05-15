@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import useAuth from "../hooks/useAuth";
 
 const SingleFoods = ({ food }) => {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const {
     food_image,
     food_name,
@@ -17,7 +17,7 @@ const SingleFoods = ({ food }) => {
   } = food || {};
 
   return (
-    <div className="flex hover:scale-105 transition  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <div className="flex hover:scale-105 transition-all  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
       <div className="flex-grow">
         <div className="rounded-lg">
           <img
