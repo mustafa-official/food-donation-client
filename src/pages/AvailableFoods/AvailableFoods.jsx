@@ -13,15 +13,16 @@ const AvailableFoods = () => {
   const [search, setSearch] = useState("");
   // const [availableFoods, setAvailableFoods] = useState([]);
   const [sortDate, setSortDate] = useState("");
+  const [quantity, setQuantity] = useState("");
   const [isTwoColumn, setIsTwoColumn] = useState(false);
 
   const { isLoading, data: availableFoods } = useQuery({
-    queryKey: ["availableFood", search, sortDate],
+    queryKey: ["availableFood", search, sortDate, quantity],
     queryFn: async () => {
       const res = await axios.get(
         `${
           import.meta.env.VITE_API_URL
-        }/available?search=${search}&sort=${sortDate}`
+        }/available?search=${search}&sort=${sortDate}&quantity=${quantity}`
       );
       return res.data;
     },
@@ -50,6 +51,11 @@ const AvailableFoods = () => {
   const handleExpiredDate = (e) => {
     const dates = e.target.value;
     setSortDate(dates);
+  };
+
+  const handleQuantity = (e) => {
+    const quantity = e.target.value;
+    setQuantity(quantity);
   };
   const handleLayout = () => {
     setIsTwoColumn(!isTwoColumn);
@@ -81,7 +87,7 @@ const AvailableFoods = () => {
       </h2>
       <div className="flex justify-center flex-col md:flex-row items-center gap-3 mt-6 md:mt-10">
         <div>
-        {/* overflow p-1 */}
+          {/* overflow p-1 */}
           <form onSubmit={handleSearch} className="bg-white rounded-md">
             <div className="flex p-1 rounded-md focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
               <input
@@ -110,6 +116,19 @@ const AvailableFoods = () => {
             <option>Sort by</option>
             <option value="asc">Ascending</option>
             <option value="des">Descending</option>
+          </select>
+        </div>
+
+        <div className="text-black">
+          <select
+            onChange={handleQuantity}
+            name="quantity"
+            id="quantity"
+            className=" bg-[#00BBE4] text-white md:py-[10px] px-2 py-[10px] md:px-4 rounded-md"
+          >
+            <option>Quantity</option>
+            <option value="five">1-5</option>
+            <option value="ten">5-10</option>
           </select>
         </div>
         <div className="lg:flex hidden">
