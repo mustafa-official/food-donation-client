@@ -67,7 +67,7 @@ const UpdateFood = () => {
   return (
     <div className="w-full mx-auto md:max-w-3xl px-6 lg:px-12 md:mt-8 mt-5">
       <Helmet>
-        <title>Pizza House | Update Food</title>
+        <title>Pure Harvest | Update Food</title>
       </Helmet>
       <form
         onSubmit={handleUpdate}

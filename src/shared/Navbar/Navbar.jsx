@@ -3,7 +3,7 @@ import useAuth from "../../hooks/useAuth";
 import { Tooltip } from "react-tooltip";
 import { Button } from "@material-tailwind/react";
 import toast from "react-hot-toast";
-import logo from "../../assets/lgopizza.png";
+import logo from "../../assets/logoo.png";
 
 const Navbar = () => {
   const { user, logOutUser } = useAuth();
@@ -52,8 +52,6 @@ const Navbar = () => {
           >
             My Food Request
           </NavLink>
-
-          
         </>
       )}
     </>
@@ -106,7 +104,7 @@ const Navbar = () => {
           </div>
 
           <Link to="/">
-            <img className="max-w-36 md:max-w-52" src={logo} alt="" />
+            <img className="w-36 md:w-44 lg:w-52" src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

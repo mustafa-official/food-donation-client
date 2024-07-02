@@ -58,7 +58,7 @@ const AddFood = () => {
   return (
     <div className="w-full mx-auto md:max-w-3xl md:mt-8 mt-5 px-6 lg:px-12">
       <Helmet>
-        <title>Pizza House | Add Food</title>
+        <title>Pure Harvest | Add Food</title>
       </Helmet>
       <form
         onSubmit={handleRequest}

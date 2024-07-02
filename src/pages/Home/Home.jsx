@@ -10,15 +10,16 @@ const Home = () => {
   return (
     <section>
       <Helmet>
-        <title>Pizza House</title>
+        <title>Pure Harvest</title>
       </Helmet>
       <Banner></Banner>
+
       <div className="px-6 lg:px-12">
         <FeaturedFoods></FeaturedFoods>
       </div>
-    <div>
-      <TrustedCompany></TrustedCompany>
-    </div>
+      <div>
+        <TrustedCompany></TrustedCompany>
+      </div>
       <div
         className="mt-14 h-[300px]  md:h-[600px]"
         style={{
@@ -29,7 +30,7 @@ const Home = () => {
         }}
       ></div>
       <div className="px-6 lg:px-12">
-      <Contact></Contact>
+        <Contact></Contact>
       </div>
       <ScrollRestoration></ScrollRestoration>
     </section>

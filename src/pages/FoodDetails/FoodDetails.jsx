@@ -79,7 +79,7 @@ const FoodDetails = () => {
   return (
     <div className="px-6 lg:px-12 lg:mt-10">
       <Helmet>
-        <title>{`Pizza House | ${food_name}`}</title>
+        <title>{`Pure Harvest | ${food_name}`}</title>
       </Helmet>
       {/* <h2 className="my-6 text-2xl font-bold">Donator Information</h2> */}
 

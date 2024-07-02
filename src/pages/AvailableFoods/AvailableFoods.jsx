@@ -13,16 +13,15 @@ const AvailableFoods = () => {
   const [search, setSearch] = useState("");
   // const [availableFoods, setAvailableFoods] = useState([]);
   const [sortDate, setSortDate] = useState("");
-  const [quantity, setQuantity] = useState("");
   const [isTwoColumn, setIsTwoColumn] = useState(false);
 
   const { isLoading, data: availableFoods } = useQuery({
-    queryKey: ["availableFood", search, sortDate, quantity],
+    queryKey: ["availableFood", search, sortDate],
     queryFn: async () => {
       const res = await axios.get(
         `${
           import.meta.env.VITE_API_URL
-        }/available?search=${search}&sort=${sortDate}&quantity=${quantity}`
+        }/available?search=${search}&sort=${sortDate}`
       );
       return res.data;
     },
@@ -53,10 +52,6 @@ const AvailableFoods = () => {
     setSortDate(dates);
   };
 
-  const handleQuantity = (e) => {
-    const quantity = e.target.value;
-    setQuantity(quantity);
-  };
   const handleLayout = () => {
     setIsTwoColumn(!isTwoColumn);
   };
@@ -68,7 +63,7 @@ const AvailableFoods = () => {
         <ReactLoading type="spin" color="#ffff" height={30} width={30} />
       </div>
     );
-  if (availableFoods.length === 0)
+  if (availableFoods?.length === 0)
     return (
       <div className="flex flex-col gap-3 justify-center min-h-[calc(80vh-80px)] items-center px-6 lg:px-12">
         <div className="">
@@ -80,7 +75,7 @@ const AvailableFoods = () => {
   return (
     <div className="px-6 lg:px-12">
       <Helmet>
-        <title>Pizza House | Available Foods</title>
+        <title>Pure Harvest | Available Foods</title>
       </Helmet>
       <h2 className="text-2xl md:text-4xl md:mt-6 mt-8 font-bold text-center">
         Available Foods
@@ -119,18 +114,6 @@ const AvailableFoods = () => {
           </select>
         </div>
 
-        <div className="text-black">
-          <select
-            onChange={handleQuantity}
-            name="quantity"
-            id="quantity"
-            className=" bg-[#00BBE4] text-white md:py-[10px] px-2 py-[10px] md:px-4 rounded-md"
-          >
-            <option>Quantity</option>
-            <option value="five">1-5</option>
-            <option value="ten">5-10</option>
-          </select>
-        </div>
         <div className="lg:flex hidden">
           <p onClick={handleLayout} className="text-2xl cursor-pointer">
             {isTwoColumn ? (

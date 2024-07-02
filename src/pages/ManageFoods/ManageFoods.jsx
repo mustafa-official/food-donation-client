@@ -54,7 +54,7 @@ const ManageFoods = () => {
           .delete(`${import.meta.env.VITE_API_URL}/remove-food/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
-              const remaining = myQueryFood.filter((food) => food._id !== id);
+              const remaining = myQueryFood?.filter((food) => food._id !== id);
               setMyFoodData(remaining);
             }
             Swal.fire({
@@ -79,7 +79,7 @@ const ManageFoods = () => {
   return (
     <section className="container px-6 lg:px-12 mx-auto pt-12">
       <Helmet>
-        <title>Pizza House | Manage Foods</title>
+        <title>Pure Harvest | Manage Foods</title>
       </Helmet>
       <div className="flex items-center gap-x-3">
         <h2 className="text-xl font-medium  ">Added Food</h2>

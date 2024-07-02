@@ -1,14 +1,29 @@
-# Pizza House
+# Pure Harvest
+###### A food donation platform where users can create accounts to access food details, add and manage their own food donations, request food when needed, and search for specific foods by name.
 
-Website: https://assignment-eleven-d78bd.web.app
+Live Link: https://assignment-eleven-d78bd.web.app
 
-## About this Website
+## Features
 
-- Create an Account
-- Login System
-- User-Friendly Interface.
-- Responsive for all devices.
-- After create an account can see details about this Food.
-- When create an account after user can add own food from 'Add Food' page and manage this food like update and delete from 'Manage My Foods' page.
-- User can food request 
-- Search specific food by food name from 'Available Foods' page.
+-After logging in, users can add their food on the 'Add Food' page.
+-Manage this food, including updating and deleting it, on the 'Manage My Foods' page.
+-Users can request food and see their requested food on the 'My Food Requests' page.
+-Users can search for food by name and sort by expiration date on the 'Available Foods' page
+
+## Technologies
+
+- React.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+- Firebase
+- JWT
+
+### Run Locally
+
+1. **Install Project Dependencies**:
+   ```sh
+   npm install
+2. **Start the Development Server**:
+    ```sh
+    npm run dev
