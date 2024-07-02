@@ -1,5 +1,5 @@
 # Pure Harvest
-###### A food donation platform where users can create accounts to access food details, add and manage their own food donations, request food when needed, and search for specific foods by name.
+##### A food donation platform where users can create accounts to access food details, add and manage their own food donations, request food when needed, and search for specific foods by name.
 
 Live Link: https://assignment-eleven-d78bd.web.app
 
