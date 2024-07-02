@@ -5,10 +5,10 @@ Live Link: https://assignment-eleven-d78bd.web.app
 
 ## Features
 
--After logging in, users can add their food on the 'Add Food' page.
--Manage this food, including updating and deleting it, on the 'Manage My Foods' page.
--Users can request food and see their requested food on the 'My Food Requests' page.
--Users can search for food by name and sort by expiration date on the 'Available Foods' page
+- After logging in, users can add their food on the 'Add Food' page.
+- Manage this food, including updating and deleting it, on the 'Manage My Foods' page.
+- Users can request food and see their requested food on the 'My Food Requests' page
+- Users can search for food by name and sort by expiration date on the 'Available Foods' page
 
 ## Technologies
 
