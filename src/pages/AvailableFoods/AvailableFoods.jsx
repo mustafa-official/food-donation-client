@@ -128,8 +128,8 @@ const AvailableFoods = () => {
       <div
         className={`mt-8 md:mt-16 gap-5 grid grid-cols-1 md:grid-cols-2 ${
           isTwoColumn
-            ? "lg:grid-cols-2 gap-x-10 gap-y-10"
-            : "lg:grid-cols-3 gap-x-8 gap-y-8"
+            ? "lg:grid-cols-2 gap-x-8 gap-y-8"
+            : "lg:grid-cols-3 gap-x-6 gap-y-6"
         }`}
       >
         {availableFoods?.map((food) => (
