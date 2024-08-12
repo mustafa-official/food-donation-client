@@ -41,7 +41,7 @@ const FeaturedFoods = () => {
       <h2 className="text-2xl leading-snug md:text-4xl font-bold text-center">
         If there is no food, send a request! <span className="block">Donate if left over</span>
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-10 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-10 gap-6">
         {foods?.map((food) => (
           <SingleFoods key={food._id} food={food}></SingleFoods>
         ))}

@@ -8,7 +8,7 @@ import TrustedCompany from "../../components/TrustedCompany";
 
 const Home = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <Helmet>
         <title>Pure Harvest</title>
       </Helmet>

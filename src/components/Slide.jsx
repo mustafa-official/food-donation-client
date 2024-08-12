@@ -25,7 +25,7 @@ const Slide = () => {
           clickable: true,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 1200,
           disableOnInteraction: false,
         }}
         loop={true}

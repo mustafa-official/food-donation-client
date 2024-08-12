@@ -2,6 +2,9 @@ import { SlLocationPin } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import useAuth from "../hooks/useAuth";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const SingleFoods = ({ food }) => {
   const { user } = useAuth();
@@ -17,9 +20,13 @@ const SingleFoods = ({ food }) => {
   } = food || {};
 
   return (
-    <div className="flex hover:scale-105 transition-all  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="flex hover:scale-105 transition-all  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800"
+    >
       <div className="flex-grow">
-        <div className="rounded-lg">
+        <div data-aos-duration="1000" className="rounded-lg">
           <img
             src={food_image}
             alt=""
@@ -73,6 +80,8 @@ const SingleFoods = ({ food }) => {
       <div>
         <Link
           to={`/food-details/${_id}`}
+          data-aos="fade-up-right"
+          data-aos-duration="500"
           className="px-5 text-center py-2.5 relative border border-[#00BBE4] rounded group font-medium w-full text-white  inline-block"
         >
           <span className="absolute top-0 left-0 w-full h-full rounded opacity-60 filter blur-sm bg-gradient-to-br from-[#00BBE4] to-gray-900"></span>
