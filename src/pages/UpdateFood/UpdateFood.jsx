@@ -85,7 +85,7 @@ const UpdateFood = () => {
                   readOnly
                   defaultValue={user?.displayName}
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -96,7 +96,7 @@ const UpdateFood = () => {
                   readOnly
                   defaultValue={user?.email}
                   type="email"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -107,7 +107,7 @@ const UpdateFood = () => {
                   readOnly
                   defaultValue={user?.photoURL}
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -118,7 +118,7 @@ const UpdateFood = () => {
                   defaultValue={pickup_location}
                   name="pickupLocation"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
 
@@ -130,7 +130,7 @@ const UpdateFood = () => {
                   defaultValue={food_name}
                   name="foodName"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
 
@@ -142,7 +142,7 @@ const UpdateFood = () => {
                   defaultValue={food_image}
                   name="foodImage"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
               <div>
@@ -154,7 +154,7 @@ const UpdateFood = () => {
                   readOnly
                   defaultValue="available"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                  className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 />
               </div>
 
@@ -177,7 +177,7 @@ const UpdateFood = () => {
                     defaultValue={food_quantity}
                     name="quantity"
                     type="number"
-                    className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                    className="block w-full px-4 py-2 mt-2 border bg-gray-900 text-gray-100 rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                   />
                 </div>
               </div>
@@ -185,7 +185,7 @@ const UpdateFood = () => {
             <textarea
               defaultValue={additional_notes}
               name="notes"
-              className="w-full border border-gray-500 bg-gray-900 text-gray-100 rounded-md  mt-6 p-3 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              className="w-full border border-gray-500 bg-gray-900 text-gray-100 rounded-md  mt-6 p-3 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
               rows={3}
             ></textarea>
           </div>

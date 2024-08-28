@@ -22,7 +22,7 @@ const AvailableSingleFood = ({ food }) => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       transition={{ duration: 0.3 }}
-      className="flex hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800"
+      className="flex hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md   "
     >
       <div className="flex-grow">
         <div className="rounded-lg">
@@ -36,11 +36,11 @@ const AvailableSingleFood = ({ food }) => {
         <h2 className="mb-1 text-xl font-bold">{food_name}</h2>
         {/* <p
             title={additional_notes}
-            className="text-[16px] mt-3  flex items-center gap-1 dark:text-gray-600"
+            className="text-[16px] mt-3  flex items-center gap-1 "
           >
             {additional_notes.slice(0, 80)}...
           </p> */}
-        <p className="text-[15px]  flex items-center mt-1 gap-1 dark:text-gray-600">
+        <p className="text-[15px]  flex items-center mt-1 gap-1 ">
           <SlLocationPin className="text-[15px]"></SlLocationPin>{" "}
           {pickup_location}
         </p>
@@ -52,7 +52,7 @@ const AvailableSingleFood = ({ food }) => {
           />
 
           <div>
-            <h1 className="text-sm  text-gray-300 capitalize dark:text-white">
+            <h1 className="text-sm  text-gray-300 capitalize ">
               {donator_name}
             </h1>
           </div>
@@ -63,7 +63,7 @@ const AvailableSingleFood = ({ food }) => {
         <p>
           Quantity: <span className="font-bold">{food_quantity}</span>
         </p>
-        <div className="flex items-center gap-2 dark:text-gray-600">
+        <div className="flex items-center gap-2 ">
           <div className="flex items-center gap-2">
             <p>
               Expired:{" "}

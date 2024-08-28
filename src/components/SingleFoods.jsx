@@ -23,7 +23,7 @@ const SingleFoods = ({ food }) => {
     <div
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="flex hover:scale-105 transition-all  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md  dark:bg-gray-50 dark:text-gray-800"
+      className="flex hover:scale-105 transition-all  hover:shadow-md-purple flex-col p-4 lg:p-5 space-y-6  h-full  border hover:border-[#00BBE4] border-white border-b-[#00BBE4]  rounded-md   "
     >
       <div className="flex-grow">
         <div data-aos-duration="1000" className="rounded-lg">
@@ -38,11 +38,11 @@ const SingleFoods = ({ food }) => {
 
         {/* <p
           title={additional_notes}
-          className="text-[16px] mt-3  flex items-center gap-1 dark:text-gray-600"
+          className="text-[16px] mt-3  flex items-center gap-1 "
         >
           {additional_notes.slice(0, 80)}...
         </p> */}
-        <p className="text-[15px]  flex items-center mt gap-1 dark:text-gray-600">
+        <p className="text-[15px]  flex items-center mt gap-1 ">
           <SlLocationPin className="text-[15px]"></SlLocationPin>{" "}
           {pickup_location}
         </p>
@@ -55,7 +55,7 @@ const SingleFoods = ({ food }) => {
           />
 
           <div>
-            <h1 className="text-sm  text-gray-300 capitalize dark:text-white">
+            <h1 className="text-sm  text-gray-300 capitalize ">
               {donator_name}
             </h1>
           </div>
@@ -66,7 +66,7 @@ const SingleFoods = ({ food }) => {
         <p>
           Quantity: <span className="font-bold">{food_quantity}</span>
         </p>
-        <div className="flex items-center gap-2 dark:text-gray-600">
+        <div className="flex items-center gap-2 ">
           <div className="flex items-center gap-2">
             <p>
               Expired:{" "}

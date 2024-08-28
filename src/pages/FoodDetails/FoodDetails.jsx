@@ -167,7 +167,7 @@ const FoodDetails = () => {
                 &#8203;
               </span>
 
-              <div className="relative inline-block px-4 pt-5   text-left align-bottom transition-all transform  border-2  bg-[#757272ad] rounded-lg shadow-xl dark:bg-gray-900 w-[80%] md:w-[70%] lg:w-[50%] my-8 pb-6 sm:align-middle">
+              <div className="relative inline-block px-4 pt-5   text-left align-bottom transition-all transform  border-2  bg-[#757272ad] rounded-lg shadow-xl  w-[80%] md:w-[70%] lg:w-[50%] my-8 pb-6 sm:align-middle">
                 {/* Request Now */}
                 <form
                   onSubmit={handleRequest}
@@ -185,7 +185,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={food_name}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1  text-[#010313] bg-[#ffffff69] border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1  text-[#010313] bg-[#ffffff69] border rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
 
@@ -197,7 +197,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={food_image}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
@@ -208,7 +208,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={donator_name}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
@@ -219,7 +219,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={donator_email}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
@@ -230,7 +230,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={pickup_location}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
                         <div>
@@ -241,7 +241,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={user?.email}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
 
@@ -253,7 +253,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={_id}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
 
@@ -265,7 +265,7 @@ const FoodDetails = () => {
                             readOnly
                             defaultValue={expired_date}
                             type="text"
-                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                            className="block w-full px-2 py-2  mt-1 text-[#010313] bg-[#ffffff69] border  rounded-md    focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                           />
                         </div>
                         <div className="flex flex-col">
